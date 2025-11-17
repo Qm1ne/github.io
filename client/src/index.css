@@ -26,14 +26,14 @@
   --popover: 0 0% 96%;
   --popover-foreground: 220 8% 15%;
   --popover-border: 220 5% 93%;
-  --primary: 217 91% 45%;
-  --primary-foreground: 0 0% 98%;
+  --primary: 217 91% 50%;
+  --primary-foreground: 0 0% 100%;
   --secondary: 220 8% 92%;
   --secondary-foreground: 220 8% 18%;
   --muted: 220 8% 94%;
-  --muted-foreground: 220 6% 35%;
-  --accent: 220 12% 93%;
-  --accent-foreground: 220 8% 20%;
+  --muted-foreground: 220 6% 40%;
+  --accent: 27 96% 55%;
+  --accent-foreground: 0 0% 100%;
   --destructive: 0 84% 45%;
   --destructive-foreground: 0 0% 98%;
   --input: 220 10% 75%;
@@ -110,14 +110,14 @@
   --popover: 220 8% 14%;
   --popover-foreground: 0 0% 92%;
   --popover-border: 220 6% 18%;
-  --primary: 217 91% 50%;
-  --primary-foreground: 0 0% 98%;
+  --primary: 217 91% 55%;
+  --primary-foreground: 0 0% 100%;
   --secondary: 220 10% 18%;
   --secondary-foreground: 0 0% 92%;
   --muted: 220 8% 16%;
   --muted-foreground: 220 6% 60%;
-  --accent: 220 12% 15%;
-  --accent-foreground: 0 0% 90%;
+  --accent: 27 96% 60%;
+  --accent-foreground: 0 0% 100%;
   --destructive: 0 84% 45%;
   --destructive-foreground: 0 0% 98%;
   --input: 220 10% 30%;
@@ -168,6 +168,10 @@
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
