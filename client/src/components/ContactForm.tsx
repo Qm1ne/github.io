@@ -174,7 +174,7 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">contact@automatetn.com</p>
+                    <p className="text-muted-foreground">qmine.arous@gmail.com</p>
                   </div>
                 </div>
 
@@ -184,7 +184,7 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">+216 XX XXX XXX</p>
+                    <p className="text-muted-foreground">+216 53 917 059</p>
                   </div>
                 </div>
 

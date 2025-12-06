@@ -1,14 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import bannerImage from "@assets/generated_images/Banner_section_gradient_tech_e48f2140.png";
+
+const bannerImage = "/generated_images/Banner_section_gradient_tech_e48f2140.png";
 
 export function Banner() {
   const { ref, isVisible } = useScrollAnimation();
   
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    contactSection?.scrollIntoView({ behavior: "smooth" });
+  const openCalendly = () => {
+    window.open(
+      "https://calendly.com/synthwave-graphics/quick-meeting",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
@@ -34,7 +38,7 @@ export function Banner() {
         <Button
           size="lg"
           variant="outline"
-          onClick={scrollToContact}
+          onClick={openCalendly}
           className="bg-background/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-background/20 text-base px-8 gap-2"
           data-testid="button-banner-cta"
         >

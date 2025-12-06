@@ -75,7 +75,7 @@ export function Footer() {
                 data-testid="button-social-linkedin"
               >
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/aiautomatetn"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -107,7 +107,7 @@ export function Footer() {
                 data-testid="button-social-facebook"
               >
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/profile.php?id=61579855040268"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"

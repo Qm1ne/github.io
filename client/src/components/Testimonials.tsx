@@ -8,10 +8,10 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const testimonials = [
   {
     quote:
-      "The AI automation solutions transformed our workflow completely. We've saved over 20 hours per week on manual tasks.",
-    author: "Karim Ben Ahmed",
-    position: "CEO, TechStart Tunisia",
-    initials: "KA",
+      "The AI automation solutions transformed my workcompletely. I've saved over 20 hours per week on manual tasks.",
+    author: "Anis Heni",
+    position: "Energy Auditor, Freelance",
+    initials: "AH",
   },
   {
     quote:
@@ -22,10 +22,10 @@ const testimonials = [
   },
   {
     quote:
-      "Outstanding n8n consulting service. They built custom automations that perfectly fit our business needs.",
-    author: "Mohamed Trabelsi",
-    position: "Founder, GrowthHub",
-    initials: "MT",
+    "Did a great job, was very helpful. Will definitely hire again.",
+    author: "Robert O'Connor",
+    position: "Director, SparkPlug inc.",
+    initials: "RO",
   },
 ];
 

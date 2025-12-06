@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import heroImage from "@assets/generated_images/Hero_background_office_workspace_03f6ce3c.png";
+
+const heroImage = "/generated_images/Hero_background_office_workspace_03f6ce3c.png";
 
 export function Hero() {
   const { ref, isVisible } = useScrollAnimation();

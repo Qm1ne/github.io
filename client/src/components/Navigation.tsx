@@ -48,11 +48,11 @@ export function Navigation() {
               data-testid="button-book-consultation"
             >
               <a
-                href="https://calendly.com"
+                href="https://calendly.com/synthwave-graphics/quick-meeting"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book Consultation
+                Free Consultation
               </a>
             </Button>
             <Button
@@ -82,7 +82,7 @@ export function Navigation() {
                     data-testid="button-book-consultation-mobile"
                   >
                     <a
-                      href="https://calendly.com"
+                      href="https://calendly.com/synthwave-graphics/quick-meeting"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
