@@ -4,7 +4,9 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
-  base: "/qm1ne.github.io/",
+  // Project site is served at https://qm1ne.github.io/github.io/
+  // Use the repo name (`github.io`) as the base path so assets resolve to `/github.io/...`
+  base: "/github.io/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
