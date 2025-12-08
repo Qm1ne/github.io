@@ -4,9 +4,9 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
-  // Project site is served at https://qm1ne.github.io/github.io/
-  // Use the repo name (`github.io`) as the base path so assets resolve to `/github.io/...`
-  base: "/github.io/",
+  // Using a custom domain (aiautomatetn.com). Serve assets from the site root.
+  // For a custom domain, set base to '/' so assets are requested from the domain root.
+  base: "/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
