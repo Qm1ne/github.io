@@ -145,7 +145,7 @@ var vite_config_default = defineConfig({
   },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: "docs",
+    outDir: path.resolve(import.meta.dirname, "docs"),
     emptyOutDir: true
   },
   server: {
@@ -274,4 +274,3 @@ app.use((req, res, next) => {
     console.log(`Server running at http://localhost:${port}`);
   });
 })();
-// test test test
