@@ -9,7 +9,7 @@ export function Banner() {
   
   const openCalendly = () => {
     window.open(
-      "https://calendly.com/synthwave-graphics/quick-meeting",
+      "https://calendly.com/aiautomatetn/30min",
       "_blank",
       "noopener,noreferrer"
     );

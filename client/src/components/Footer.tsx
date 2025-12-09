@@ -53,7 +53,7 @@ export function Footer() {
                 Contact
               </button>
               <a
-                href="https://calendly.com"
+                href="https://calendly.com/aiautomatetn/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"

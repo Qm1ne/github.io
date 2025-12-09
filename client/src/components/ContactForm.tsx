@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
@@ -41,7 +42,28 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
     }
   }, [isSuccess, form]);
 
-  const handleSubmit = (data: InsertContactSubmission) => {
+  const handleSubmit = async (data: InsertContactSubmission) => {
+    // Send via EmailJS first (client-side). Template fields: name, Phone, email, message
+    try {
+      await emailjs.send(
+        "service_csz2oen",
+        "template_kx6o0c6",
+        {
+          name: data.name,
+          Phone: data.phone,
+          email: data.email,
+          message: data.message,
+        },
+        "bztEB7S1n0g91s85-"
+      );
+    } catch (err) {
+      // Log errors but continue with existing onSubmit flow so UI behaviour doesn't change
+      // You can add user-facing error handling here if desired
+      // eslint-disable-next-line no-console
+      console.error("EmailJS send error:", err);
+    }
+
+    // Continue with existing submission flow (server, DB, toast, etc.)
     onSubmit(data);
   };
 
@@ -74,7 +96,7 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                       <FormLabel>Full Name</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="John Doe"
+                          placeholder="Foulen  Fleny"
                           {...field}
                           data-testid="input-name"
                         />
@@ -174,7 +196,7 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">qmine.arous@gmail.com</p>
+                    <p className="text-muted-foreground">contact@aiautomatetn.com</p>
                   </div>
                 </div>
 
