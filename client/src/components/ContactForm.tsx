@@ -44,21 +44,27 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
 
   const handleSubmit = async (data: InsertContactSubmission) => {
     // Send via EmailJS first (client-side). Template fields: name, Phone, email, message
+    const emailPayload = {
+      name: data.name,
+      Phone: data.phone,
+      email: data.email,
+      message: data.message,
+    };
+    
+    // eslint-disable-next-line no-console
+    console.log("Attempting to send email with payload:", emailPayload);
+    
     try {
-      await emailjs.send(
+      const response = await emailjs.send(
         "service_csz2oen",
-        "template_kx6o0c6",
-        {
-          name: data.name,
-          Phone: data.phone,
-          email: data.email,
-          message: data.message,
-        },
+        "template_jfhhfs4",
+        emailPayload,
         "bztEB7S1n0g91s85-"
       );
+      // eslint-disable-next-line no-console
+      console.log("EmailJS response:", response);
     } catch (err) {
       // Log errors but continue with existing onSubmit flow so UI behaviour doesn't change
-      // You can add user-facing error handling here if desired
       // eslint-disable-next-line no-console
       console.error("EmailJS send error:", err);
     }

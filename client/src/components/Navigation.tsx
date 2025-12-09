@@ -48,7 +48,7 @@ export function Navigation() {
               data-testid="button-book-consultation"
             >
               <a
-                href="https://calendly.com/synthwave-graphics/quick-meeting"
+                href="https://calendly.com/aiautomatetn/30min"
                 target="_blank"
                 rel="noopener noreferrer"
               >
