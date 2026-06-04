@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useTranslation } from "react-i18next";
 
 const bannerImage = "/generated_images/Banner_section_gradient_tech_e48f2140.png";
 
 export function Banner() {
+  const { t } = useTranslation();
   const { ref, isVisible } = useScrollAnimation();
   
   const openCalendly = () => {
@@ -30,10 +32,10 @@ export function Banner() {
           className="text-3xl lg:text-5xl font-bold text-primary-foreground mb-6 lg:mb-8"
           data-testid="text-banner-tagline"
         >
-          Ready to Scale Your Business with AI?
+          {t('banner.title')}
         </h2>
         <p className="text-lg lg:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-          Join leading businesses in Tunisia that trust us to deliver intelligent automation solutions
+          {t('banner.subtitle')}
         </p>
         <Button
           size="lg"
@@ -42,7 +44,7 @@ export function Banner() {
           className="bg-background/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-background/20 text-base px-8 gap-2"
           data-testid="button-banner-cta"
         >
-          Schedule Your Free Consultation
+          {t('banner.cta')}
           <ArrowRight className="h-5 w-5" />
         </Button>
       </div>

@@ -10,8 +10,10 @@ import { Testimonials } from "@/components/Testimonials";
 import { CaseStudies } from "@/components/CaseStudies";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   const { toast } = useToast();
 
   const contactMutation = useMutation({
@@ -20,14 +22,14 @@ export default function Home() {
     },
     onSuccess: () => {
       toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
+        title: t('home.success_title'),
+        description: t('home.success_desc'),
       });
     },
     onError: () => {
       toast({
-        title: "Failed to send message",
-        description: "Please try again or contact us directly.",
+        title: t('home.error_title'),
+        description: t('home.error_desc'),
         variant: "destructive",
       });
     },

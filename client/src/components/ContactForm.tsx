@@ -7,8 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock, Loader2 } from "lucide-react";
+import { Loader2, Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useTranslation } from "react-i18next";
 import {
   Form,
   FormControl,
@@ -25,6 +26,7 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps) {
+  const { t } = useTranslation();
   const { ref, isVisible } = useScrollAnimation();
   const form = useForm<InsertContactSubmission>({
     resolver: zodResolver(insertContactSubmissionSchema),
@@ -81,10 +83,10 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
             className="text-3xl lg:text-4xl font-bold text-foreground mb-4"
             data-testid="text-contact-title"
           >
-            Get In Touch
+            {t('contact.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Ready to transform your business? Let's discuss your automation needs
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -99,10 +101,10 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel>{t('contact.name_label')}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Foulen  Fleny"
+                          placeholder={t('contact.name_placeholder')}
                           {...field}
                           data-testid="input-name"
                         />
@@ -117,11 +119,11 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email Address</FormLabel>
+                      <FormLabel>{t('contact.email_label')}</FormLabel>
                       <FormControl>
                         <Input
                           type="email"
-                          placeholder="john@example.com"
+                          placeholder={t('contact.email_placeholder')}
                           {...field}
                           data-testid="input-email"
                         />
@@ -136,11 +138,11 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Phone Number</FormLabel>
+                      <FormLabel>{t('contact.phone_label')}</FormLabel>
                       <FormControl>
                         <Input
                           type="tel"
-                          placeholder="+216 XX XXX XXX"
+                          placeholder={t('contact.phone_placeholder')}
                           {...field}
                           data-testid="input-phone"
                         />
@@ -155,10 +157,10 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>{t('contact.message_label')}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell us about your automation needs..."
+                          placeholder={t('contact.message_placeholder')}
                           className="min-h-32 resize-none"
                           {...field}
                           data-testid="input-message"
@@ -179,10 +181,10 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                   {isPending ? (
                     <>
                       <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      Sending...
+                      {t('contact.sending')}
                     </>
                   ) : (
-                    "Send Message"
+                    t('contact.submit')
                   )}
                 </Button>
               </form>
@@ -192,7 +194,7 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
           <div className="lg:col-span-2 space-y-8">
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-foreground">
-                Contact Information
+                {t('contact.info_title')}
               </h3>
               
               <div className="space-y-4">
@@ -201,7 +203,7 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
+                    <p className="font-medium text-foreground">{t('contact.info_email')}</p>
                     <p className="text-muted-foreground">contact@aiautomatetn.com</p>
                   </div>
                 </div>
@@ -211,7 +213,7 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Phone</p>
+                    <p className="font-medium text-foreground">{t('contact.info_phone')}</p>
                     <p className="text-muted-foreground">+216 53 917 059</p>
                   </div>
                 </div>
@@ -221,8 +223,8 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">Tunis, Tunisia</p>
+                    <p className="font-medium text-foreground">{t('contact.info_location')}</p>
+                    <p className="text-muted-foreground">{t('contact.info_loc_val')}</p>
                   </div>
                 </div>
 
@@ -231,8 +233,8 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Business Hours</p>
-                    <p className="text-muted-foreground">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p className="font-medium text-foreground">{t('contact.info_hours')}</p>
+                    <p className="text-muted-foreground">{t('contact.info_hours_val')}</p>
                   </div>
                 </div>
               </div>

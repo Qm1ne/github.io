@@ -2,8 +2,10 @@ import { SiLinkedin, SiFacebook, SiX } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+  const { t } = useTranslation();
   const { ref, isVisible } = useScrollAnimation();
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
@@ -31,26 +33,26 @@ export function Footer() {
               </span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Transforming businesses in Tunisia with cutting-edge AI automation solutions.
+              {t('footer.desc')}
             </p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Quick Links</h3>
+            <h3 className="font-semibold text-foreground">{t('footer.quick_links')}</h3>
             <nav className="flex flex-col gap-2">
               <button
                 onClick={scrollToServices}
                 className="text-muted-foreground hover:text-foreground transition-colors text-left"
                 data-testid="link-footer-services"
               >
-                Services
+                {t('footer.services')}
               </button>
               <button
                 onClick={scrollToContact}
                 className="text-muted-foreground hover:text-foreground transition-colors text-left"
                 data-testid="link-footer-contact"
               >
-                Contact
+                {t('footer.contact')}
               </button>
               <a
                 href="https://calendly.com/aiautomatetn/30min"
@@ -59,13 +61,13 @@ export function Footer() {
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-booking"
               >
-                Book Consultation
+                {t('nav.book_consultation')}
               </a>
             </nav>
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Connect With Us</h3>
+            <h3 className="font-semibold text-foreground">{t('footer.connect')}</h3>
             <div className="flex gap-3">
               <Button
                 variant="outline"
@@ -123,7 +125,7 @@ export function Footer() {
 
         <div className="text-center text-sm text-muted-foreground">
           <p data-testid="text-copyright">
-            © {new Date().getFullYear()} AutomateTN. All rights reserved.
+            © {new Date().getFullYear()} {t('footer.all_rights')}
           </p>
         </div>
       </div>

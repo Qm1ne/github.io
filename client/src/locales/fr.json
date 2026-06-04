@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "free_consultation": "Consultation Gratuite",
+    "contact_us": "Contactez-nous",
+    "book_consultation": "Réserver une Consultation"
+  },
+  "hero": {
+    "headline_1": "Transformez Votre Entreprise avec",
+    "headline_2": "l'Automatisation IA Tunisie",
+    "subtext": "Agence IA Tunisie experte en transformation digitale Tunisie. Nous optimisons vos processus avec l'intelligence artificielle Tunisie, assurons une intégration CRM Tunisie, et stimulons le marketing automation Tunisie avec des solutions de pointe.",
+    "get_started": "Commencer",
+    "learn_more": "En Savoir Plus"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions complètes d'automatisation IA conçues pour améliorer l'efficacité de votre entreprise",
+    "s1_title": "Flux de travail IA",
+    "s1_desc": "Automatisez les tâches répétitives et rationalisez les processus commerciaux avec des flux de travail intelligents basés sur l'IA et adaptés à vos besoins.",
+    "s2_title": "Intégration CRM",
+    "s2_desc": "Intégrez de manière transparente les capacités d'IA dans vos systèmes CRM existants pour améliorer les relations clients et la gestion des données.",
+    "s3_title": "Génération de Leads",
+    "s3_desc": "Boostez votre pipeline de ventes avec des stratégies de génération de leads basées sur l'IA qui identifient et cultivent des prospects de haute qualité.",
+    "s4_title": "Conseil n8n/Make",
+    "s4_desc": "Conseils d'experts sur la mise en œuvre de plateformes d'automatisation puissantes telles que n8n et Make pour connecter efficacement vos outils commerciaux."
+  },
+  "banner": {
+    "title": "Prêt à Développer Votre Entreprise avec l'IA ?",
+    "subtitle": "Rejoignez les entreprises de premier plan en Tunisie qui nous font confiance pour fournir des solutions d'automatisation intelligentes",
+    "cta": "Planifier Votre Consultation Gratuite"
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "subtitle": "De vrais résultats d'entreprises que nous avons aidées à se transformer",
+    "t1_quote": "Les solutions d'automatisation IA ont complètement transformé mon travail. J'ai économisé plus de 20 heures par semaine sur des tâches manuelles.",
+    "t1_author": "Anis Heni",
+    "t1_pos": "Auditeur Énergétique, Indépendant",
+    "t2_quote": "Leur expertise en intégration CRM nous a aidés à consolider nos données clients et à améliorer notre pipeline de ventes de 40 %.",
+    "t2_author": "Leila Mansour",
+    "t2_pos": "Directrice des Opérations, Digital Solutions",
+    "t3_quote": "Excellent travail, très serviable. Nous ferons certainement appel à eux de nouveau.",
+    "t3_author": "Robert O'Connor",
+    "t3_pos": "Directeur, SparkPlug inc."
+  },
+  "caseStudies": {
+    "title": "Ressources et Études de Cas",
+    "subtitle": "Apprenez de nos succès et explorez des informations sur l'automatisation",
+    "c1_title": "Automatisation des Dossiers Photovoltaïques STEG avec l'IA",
+    "c1_desc": "Comment nous avons aidé des installateurs solaires à automatiser la génération des dossiers STEG avec n8n automatisation Tunisie.",
+    "c1_type": "Étude de cas",
+    "c2_title": "Succès de l'Intégration CRM",
+    "c2_desc": "Transformer les opérations de vente avec une intégration CRM Tunisie transparente et l'évaluation des leads par IA.",
+    "c2_type": "Article de Blog",
+    "c3_title": "Mise à l'Échelle de la Génération de Leads avec n8n",
+    "c3_desc": "Un guide complet pour créer des systèmes de génération de leads IA qui fournissent quotidiennement des prospects qualifiés.",
+    "c3_type": "Tutoriel",
+    "read_more": "Lire la suite"
+  },
+  "articles": {
+    "steg-document-generator": {
+      "title": "Automatisation des Dossiers Photovoltaïques STEG avec l'IA",
+      "content": "## Le Défi\n\nLes installateurs solaires en Tunisie sont confrontés à d'importants goulots d'étranglement administratifs lors du traitement des demandes d'installations photovoltaïques. Générer manuellement les documents requis par la STEG (Société Tunisienne de l'Électricité et du Gaz) prend du temps, est sujet à des erreurs humaines et ralentit l'ensemble du processus.\n\n## Notre Solution : Automatisation IA Tunisie\n\nEn tant qu'**agence IA Tunisie** de premier plan, nous avons mis en place une solution sur mesure utilisant **n8n automatisation Tunisie** pour rationaliser ce processus. Nous avons conçu un workflow automatisé qui :\n\n1. Capture les données clients depuis le site web via un **chatbot IA Tunisie**.\n2. Analyse automatiquement les spécifications techniques grâce à l'**intelligence artificielle Tunisie**.\n3. Génère instantanément des documents PDF parfaitement conformes aux exigences STEG.\n4. Synchronise tous les dossiers dans la base de données via notre **intégration CRM Tunisie**.\n\n## Les Résultats\n\n- **Réduction de 80 %** du temps administratif par installation.\n- **Zéro erreur** dans les dossiers STEG soumis.\n- Des délais d'approbation accélérés, pour une meilleure satisfaction client.\n\nC'est un exemple parfait de la façon dont l'**automatisation processus métier Tunisie** et la **transformation digitale Tunisie** peuvent révolutionner les opérations des PME locales."
+    },
+    "crm-integration": {
+      "title": "Succès de l'Intégration CRM",
+      "content": "## Combler le Fossé des Données\n\nPour de nombreuses entreprises en croissance, les données sont cloisonnées (emails, tableurs, outils marketing). Une grande marque e-commerce à Tunis perdait des clients potentiels car son équipe commerciale ne parvenait pas à suivre efficacement les interactions.\n\n## Intégration CRM Tunisie Sur Mesure\n\nNous avons piloté leur **transformation digitale Tunisie** en réalisant une **intégration CRM Tunisie** complète. Notre équipe a connecté leur système interne à HubSpot, en utilisant **Make (Integromat) Tunisie** et des workflows n8n pour assurer une synchronisation en temps réel.\n\n- **Routage Automatisé des Leads :** Les demandes entrantes sont désormais automatiquement assignées aux bons commerciaux.\n- **CRM IA Tunisie :** Nous avons intégré des analyses prédictives pour évaluer les prospects selon leur probabilité de conversion.\n- **Marketing Automation Tunisie :** Des emails ciblés sont envoyés automatiquement en fonction du parcours client.\n\n## Résultat\n\nEn exploitant nos **solutions IA Tunisie**, le client a vu son efficacité commerciale augmenter de **40 %** avec des temps de réponse drastiquement réduits. L'**automatisation entreprise Tunisie** n'est plus un luxe, c'est une nécessité."
+    },
+    "scaling-lead-generation": {
+      "title": "Mise à l'Échelle de la Génération de Leads avec n8n",
+      "content": "## La Nouvelle Ère de la Génération de Leads Tunisie\n\nLe marketing traditionnel devient de moins en moins efficace. Pour rester compétitives, les entreprises modernes se tournent vers l'**automatisation marketing Tunisie**.\n\n## Construire le Moteur\n\nDans cette étude de cas, nous explorons comment notre équipe de **consulting IA Tunisie** a construit une machine automatisée de génération de leads en utilisant **n8n automatisation Tunisie**.\n\n1. **Scraping et Enrichissement de Données :** Nous avons configuré des outils pour identifier les prospects B2B ciblés partout en Tunisie.\n2. **Personnalisation par l'IA :** En utilisant l'**IA générative Tunisie**, le système rédige des emails ultra-personnalisés en fonction du secteur du prospect.\n3. **Prospection Omnicanale :** Le workflow orchestre les contacts par email et LinkedIn, en suivant les ouvertures et réponses.\n4. **Prise de Relais :** Dès qu'un prospect répond, un **chatbot IA Tunisie** prend le relais pour une qualification préliminaire avant de le transférer à un commercial via une **intégration CRM Tunisie** directe.\n\n## Pourquoi C'est Important\n\nCe système d'**automatisation sur mesure Tunisie** génère 15 à 20 prospects qualifiés chaque jour, permettant aux équipes de vente de se concentrer sur la clôture. Si vous cherchez des **solutions IA Tunisie** similaires, contactez notre **agence IA Tunisie**."
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Prêt à transformer votre entreprise ? Discutons de vos besoins en automatisation",
+    "name_label": "Nom Complet",
+    "name_placeholder": "Foulen Fleny",
+    "email_label": "Adresse E-mail",
+    "email_placeholder": "jean@exemple.com",
+    "phone_label": "Numéro de Téléphone",
+    "phone_placeholder": "+216 XX XXX XXX",
+    "message_label": "Message",
+    "message_placeholder": "Parlez-nous de vos besoins en automatisation...",
+    "submit": "Envoyer le Message",
+    "sending": "Envoi...",
+    "info_title": "Coordonnées",
+    "info_email": "E-mail",
+    "info_phone": "Téléphone",
+    "info_location": "Emplacement",
+    "info_loc_val": "Tunis, Tunisie",
+    "info_hours": "Heures d'Ouverture",
+    "info_hours_val": "Lun - Ven : 9h00 - 18h00"
+  },
+  "footer": {
+    "desc": "Transformer les entreprises en Tunisie avec des solutions d'automatisation IA de pointe.",
+    "quick_links": "Liens Rapides",
+    "connect": "Rejoignez-nous",
+    "all_rights": "AutomateTN. Tous droits réservés.",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "success_title": "Message envoyé avec succès !",
+    "success_desc": "Nous vous répondrons dans les 24 heures.",
+    "error_title": "Échec de l'envoi du message",
+    "error_desc": "Veuillez réessayer ou nous contacter directement."
+  }
+}

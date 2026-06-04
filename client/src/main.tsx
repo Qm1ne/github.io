@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import App from "./App";
 import "./index.css";
+import "./i18n";
 
 // Initialize EmailJS once at app startup
 emailjs.init("bztEB7S1n0g91s85-");

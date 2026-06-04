@@ -1,36 +1,34 @@
 import { Card } from "@/components/ui/card";
 import { Workflow, Database, TrendingUp, Zap } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
-const services = [
-  {
-    icon: Workflow,
-    title: "AI Workflows",
-    description:
-      "Automate repetitive tasks and streamline business processes with intelligent AI-powered workflows tailored to your needs.",
-  },
-  {
-    icon: Database,
-    title: "CRM Integration",
-    description:
-      "Seamlessly integrate AI capabilities into your existing CRM systems to enhance customer relationships and data management.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Lead Generation",
-    description:
-      "Boost your sales pipeline with AI-driven lead generation strategies that identify and nurture high-quality prospects.",
-  },
-  {
-    icon: Zap,
-    title: "n8n/Make Consulting",
-    description:
-      "Expert guidance on implementing powerful automation platforms like n8n and Make to connect your business tools efficiently.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export function Services() {
+  const { t } = useTranslation();
   const { ref, isVisible } = useScrollAnimation();
+  
+  const services = [
+    {
+      icon: Workflow,
+      title: t('services.s1_title'),
+      description: t('services.s1_desc'),
+    },
+    {
+      icon: Database,
+      title: t('services.s2_title'),
+      description: t('services.s2_desc'),
+    },
+    {
+      icon: TrendingUp,
+      title: t('services.s3_title'),
+      description: t('services.s3_desc'),
+    },
+    {
+      icon: Zap,
+      title: t('services.s4_title'),
+      description: t('services.s4_desc'),
+    },
+  ];
   
   return (
     <section id="services" ref={ref} className="py-16 lg:py-24 bg-muted/30">
@@ -40,10 +38,10 @@ export function Services() {
             className="text-3xl lg:text-4xl font-bold text-foreground mb-4"
             data-testid="text-services-title"
           >
-            Our Services
+            {t('services.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Comprehensive AI automation solutions designed to elevate your business efficiency
+            {t('services.subtitle')}
           </p>
         </div>
 

@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export function Navigation() {
+  const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -52,7 +55,7 @@ export function Navigation() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Free Consultation
+                {t('nav.free_consultation')}
               </a>
             </Button>
             <Button
@@ -61,8 +64,24 @@ export function Navigation() {
               onClick={scrollToContact}
               data-testid="button-contact-us"
             >
-              Contact Us
+              {t('nav.contact_us')}
             </Button>
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Globe className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => i18n.changeLanguage('en')}>
+                  English {i18n.language === 'en' && '✓'}
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => i18n.changeLanguage('fr')}>
+                  Français {i18n.language === 'fr' && '✓'}
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -86,7 +105,7 @@ export function Navigation() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Book Consultation
+                      {t('nav.book_consultation')}
                     </a>
                   </Button>
                 </SheetClose>
@@ -97,8 +116,25 @@ export function Navigation() {
                   onClick={scrollToContact}
                   data-testid="button-contact-us-mobile"
                 >
-                  Contact Us
+                  {t('nav.contact_us')}
                 </Button>
+                
+                <div className="flex gap-2 justify-center mt-4">
+                  <Button 
+                    variant={i18n.language === 'en' ? 'default' : 'outline'} 
+                    size="sm" 
+                    onClick={() => i18n.changeLanguage('en')}
+                  >
+                    EN
+                  </Button>
+                  <Button 
+                    variant={i18n.language === 'fr' ? 'default' : 'outline'} 
+                    size="sm" 
+                    onClick={() => i18n.changeLanguage('fr')}
+                  >
+                    FR
+                  </Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>

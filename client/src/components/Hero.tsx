@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useTranslation } from "react-i18next";
 
 const heroImage = "/generated_images/Hero_background_office_workspace_03f6ce3c.png";
 
 export function Hero() {
+  const { t } = useTranslation();
   const { ref, isVisible } = useScrollAnimation();
   
   const scrollToContact = () => {
@@ -31,16 +33,14 @@ export function Hero() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
             data-testid="text-hero-headline"
           >
-            Transform Your Business with{" "}
-            <span className="text-primary">AI Automation</span>
+            {t('hero.headline_1')} <span className="text-primary">{t('hero.headline_2')}</span>
           </h1>
           
           <p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
             data-testid="text-hero-subtext"
           >
-            Expert consulting services in Tunisia. We streamline your workflows,
-            integrate CRM systems, and boost lead generation with cutting-edge AI solutions.
+            {t('hero.subtext')}
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -51,7 +51,7 @@ export function Hero() {
               className="text-base px-8 gap-2"
               data-testid="button-get-started"
             >
-              Get Started
+              {t('hero.get_started')}
               <ArrowRight className="h-5 w-5" />
             </Button>
             <Button
@@ -61,7 +61,7 @@ export function Hero() {
               className="text-base px-8 backdrop-blur-sm bg-background/50"
               data-testid="button-learn-more"
             >
-              <a href="#services">Learn More</a>
+              <a href="#services">{t('hero.learn_more')}</a>
             </Button>
           </div>
         </div>

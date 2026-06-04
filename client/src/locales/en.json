@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "free_consultation": "Free Consultation",
+    "contact_us": "Contact Us",
+    "book_consultation": "Book Consultation"
+  },
+  "hero": {
+    "headline_1": "Transform Your Business with",
+    "headline_2": "AI Automation Tunisia",
+    "subtext": "Expert AI agency Tunisia offering predictive analytics, AI solutions Tunisia, and digital transformation Tunisia. We streamline your workflows, ensure seamless CRM integration Tunisia, and boost AI lead generation Tunisia.",
+    "get_started": "Get Started",
+    "learn_more": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive AI automation solutions designed to elevate your business efficiency",
+    "s1_title": "AI Workflows",
+    "s1_desc": "Automate repetitive tasks and streamline business processes with intelligent AI-powered workflows tailored to your needs.",
+    "s2_title": "CRM Integration",
+    "s2_desc": "Seamlessly integrate AI capabilities into your existing CRM systems to enhance customer relationships and data management.",
+    "s3_title": "Lead Generation",
+    "s3_desc": "Boost your sales pipeline with AI-driven lead generation strategies that identify and nurture high-quality prospects.",
+    "s4_title": "n8n/Make Consulting",
+    "s4_desc": "Expert guidance on implementing powerful automation platforms like n8n and Make to connect your business tools efficiently."
+  },
+  "banner": {
+    "title": "Ready to Scale Your Business with AI?",
+    "subtitle": "Join leading businesses in Tunisia that trust us to deliver intelligent automation solutions",
+    "cta": "Schedule Your Free Consultation"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real results from businesses we've helped transform",
+    "t1_quote": "The AI automation solutions transformed my work completely. I've saved over 20 hours per week on manual tasks.",
+    "t1_author": "Anis Heni",
+    "t1_pos": "Energy Auditor, Freelance",
+    "t2_quote": "Their CRM integration expertise helped us consolidate our customer data and improve our sales pipeline by 40%.",
+    "t2_author": "Leila Mansour",
+    "t2_pos": "Operations Director, Digital Solutions",
+    "t3_quote": "Did a great job, was very helpful. Will definitely hire again.",
+    "t3_author": "Robert O'Connor",
+    "t3_pos": "Director, SparkPlug inc."
+  },
+  "caseStudies": {
+    "title": "Resources & Case Studies",
+    "subtitle": "Learn from our success stories and explore automation insights",
+    "c1_title": "Automating STEG Photovoltaic Document Generation with AI",
+    "c1_desc": "How we helped solar installers in Tunisia automate the generation of STEG photovoltaic required documents using n8n automation Tunisia.",
+    "c1_type": "Case Study",
+    "c2_title": "CRM Integration Success Story",
+    "c2_desc": "Transforming sales operations through seamless HubSpot CRM integration Tunisia and AI-powered lead scoring.",
+    "c2_type": "Blog Post",
+    "c3_title": "Scaling Lead Generation with n8n",
+    "c3_desc": "A comprehensive guide to building automated AI lead generation systems that deliver qualified prospects daily.",
+    "c3_type": "Tutorial",
+    "read_more": "Read More"
+  },
+  "articles": {
+    "steg-document-generator": {
+      "title": "Automating STEG Photovoltaic Document Generation with AI",
+      "content": "## The Challenge\n\nSolar installers in Tunisia face significant administrative bottlenecks when processing applications for photovoltaic installations. Generating the required STEG (Société Tunisienne de l'Electricité et du Gaz) documents manually is time-consuming, prone to human error, and slows down the entire installation pipeline.\n\n## Our Solution: AI Automation Tunisia\n\nAs a premier **AI agency Tunisia**, we implemented a custom solution using **n8n automation Tunisia** to streamline this process. We built an automated workflow that:\n\n1. Captures customer data from the installer's website via an **AI chatbot Tunisia**.\n2. Automatically parses technical specifications and site survey data using **artificial intelligence Tunisia**.\n3. Generates perfectly formatted STEG-compliant PDF documents instantly.\n4. Syncs all records seamlessly into the company's database through our custom **CRM integration Tunisia**.\n\n## The Results\n\n- **80% reduction** in administrative time per installation.\n- **Zero errors** in submitted STEG applications.\n- Accelerated approval times, leading to higher customer satisfaction.\n\nThis is just one example of how **business process automation Tunisia** and **digital transformation Tunisia** can revolutionize operations for local SMEs."
+    },
+    "crm-integration": {
+      "title": "CRM Integration Success Story",
+      "content": "## Bridging the Data Gap\n\nFor many growing businesses, data gets siloed across multiple platforms—emails, spreadsheets, and marketing tools. A leading e-commerce brand in Tunis was losing potential clients because their sales team couldn't track customer interactions effectively.\n\n## Custom CRM Integration Tunisia\n\nWe spearheaded their **digital transformation Tunisia** by executing a comprehensive **CRM integration Tunisia**. Our team connected their custom backend with HubSpot, utilizing **Make Integromat Tunisia** and **n8n workflow Tunisia** to ensure real-time data synchronization.\n\n- **Automated Lead Routing:** Incoming inquiries are now automatically assigned to the right sales reps.\n- **AI CRM Tunisia:** We integrated predictive analytics to score leads based on their likelihood to convert.\n- **Email Marketing Automation:** Trigger-based emails are sent out automatically depending on the user's journey.\n\n## Outcome\n\nBy leveraging **AI solutions Tunisia**, the client saw a **40% increase** in their sales pipeline efficiency and drastically reduced response times. **Enterprise automation Tunisia** is no longer a luxury—it's a necessity for scaling."
+    },
+    "scaling-lead-generation": {
+      "title": "Scaling Lead Generation with n8n",
+      "content": "## The New Era of AI Lead Generation Tunisia\n\nTraditional outbound marketing is becoming increasingly inefficient. To stay ahead, modern businesses are turning to **AI marketing Tunisia** and **automated workflows Tunisia**.\n\n## Building the Engine\n\nIn this tutorial case study, we explore how our **AI consulting Tunisia** team built an automated lead generation machine using **n8n automation Tunisia**.\n\n1. **Data Scraping & Enrichment:** We set up automated web scraping tools to identify target B2B prospects across Tunisia.\n2. **AI Personalization:** Using **generative AI Tunisia**, the system drafts hyper-personalized outreach emails based on the prospect's industry and recent company news.\n3. **Omnichannel Outreach:** The workflow orchestrates touchpoints across email and LinkedIn, tracking opens and replies.\n4. **Seamless Handoff:** Once a prospect replies, an **AI chatbot Tunisia** takes over preliminary qualifying before handing them off to a human closer via a direct **CRM integration Tunisia**.\n\n## Why It Matters\n\nThis **custom automation Tunisia** system delivers 15-20 qualified prospects daily, allowing sales teams to focus purely on closing. If you're looking to implement similar **AI solutions Tunisia**, contact our **AI agency Tunisia** today."
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to transform your business? Let's discuss your automation needs",
+    "name_label": "Full Name",
+    "name_placeholder": "Foulen Fleny",
+    "email_label": "Email Address",
+    "email_placeholder": "john@example.com",
+    "phone_label": "Phone Number",
+    "phone_placeholder": "+216 XX XXX XXX",
+    "message_label": "Message",
+    "message_placeholder": "Tell us about your automation needs...",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "info_title": "Contact Information",
+    "info_email": "Email",
+    "info_phone": "Phone",
+    "info_location": "Location",
+    "info_loc_val": "Tunis, Tunisia",
+    "info_hours": "Business Hours",
+    "info_hours_val": "Mon - Fri: 9:00 AM - 6:00 PM"
+  },
+  "footer": {
+    "desc": "Transforming businesses in Tunisia with cutting-edge AI automation solutions.",
+    "quick_links": "Quick Links",
+    "connect": "Connect With Us",
+    "all_rights": "AutomateTN. All rights reserved.",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "success_title": "Message sent successfully!",
+    "success_desc": "We'll get back to you within 24 hours.",
+    "error_title": "Failed to send message",
+    "error_desc": "Please try again or contact us directly."
+  }
+}

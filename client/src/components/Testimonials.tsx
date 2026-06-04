@@ -4,34 +4,33 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
-const testimonials = [
-  {
-    quote:
-      "The AI automation solutions transformed my workcompletely. I've saved over 20 hours per week on manual tasks.",
-    author: "Anis Heni",
-    position: "Energy Auditor, Freelance",
-    initials: "AH",
-  },
-  {
-    quote:
-      "Their CRM integration expertise helped us consolidate our customer data and improve our sales pipeline by 40%.",
-    author: "Leila Mansour",
-    position: "Operations Director, Digital Solutions",
-    initials: "LM",
-  },
-  {
-    quote:
-    "Did a great job, was very helpful. Will definitely hire again.",
-    author: "Robert O'Connor",
-    position: "Director, SparkPlug inc.",
-    initials: "RO",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export function Testimonials() {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const { ref, isVisible } = useScrollAnimation();
+
+  const testimonials = [
+    {
+      quote: t('testimonials.t1_quote'),
+      author: t('testimonials.t1_author'),
+      position: t('testimonials.t1_pos'),
+      initials: "AH",
+    },
+    {
+      quote: t('testimonials.t2_quote'),
+      author: t('testimonials.t2_author'),
+      position: t('testimonials.t2_pos'),
+      initials: "LM",
+    },
+    {
+      quote: t('testimonials.t3_quote'),
+      author: t('testimonials.t3_author'),
+      position: t('testimonials.t3_pos'),
+      initials: "RO",
+    },
+  ];
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -49,10 +48,10 @@ export function Testimonials() {
             className="text-3xl lg:text-4xl font-bold text-foreground mb-4"
             data-testid="text-testimonials-title"
           >
-            What Our Clients Say
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Real results from businesses we've helped transform
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
