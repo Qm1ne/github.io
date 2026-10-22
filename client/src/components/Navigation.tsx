@@ -1,14 +1,23 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { pathForLang, type Lang } from "@/lib/routing";
 
 export function Navigation() {
   const { t, i18n } = useTranslation();
+  const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  // Each language has its own URL, so switching language is a navigation,
+  // not an in-page state change.
+  const currentLang: Lang = i18n.language === "fr" ? "fr" : "en";
+  const langHref = (lang: Lang) => pathForLang(location, lang);
+  const home = pathForLang("/", currentLang);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,14 +43,14 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-2">
+          <a href={home} className="flex items-center gap-2" data-testid="link-home">
             <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-xl">AI</span>
             </div>
             <span className="text-xl font-semibold text-foreground">
               AutomateTN
             </span>
-          </div>
+          </a>
 
           <div className="hidden md:flex items-center gap-4">
             <Button
@@ -74,11 +83,15 @@ export function Navigation() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => i18n.changeLanguage('en')}>
-                  English {i18n.language === 'en' && '✓'}
+                <DropdownMenuItem asChild>
+                  <a href={langHref('en')} hrefLang="en" lang="en">
+                    English {currentLang === 'en' && '✓'}
+                  </a>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => i18n.changeLanguage('fr')}>
-                  Français {i18n.language === 'fr' && '✓'}
+                <DropdownMenuItem asChild>
+                  <a href={langHref('fr')} hrefLang="fr" lang="fr">
+                    Français {currentLang === 'fr' && '✓'}
+                  </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -101,7 +114,7 @@ export function Navigation() {
                     data-testid="button-book-consultation-mobile"
                   >
                     <a
-                      href="https://calendly.com/synthwave-graphics/quick-meeting"
+                      href="https://calendly.com/aiautomatetn/30min"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -120,19 +133,19 @@ export function Navigation() {
                 </Button>
                 
                 <div className="flex gap-2 justify-center mt-4">
-                  <Button 
-                    variant={i18n.language === 'en' ? 'default' : 'outline'} 
-                    size="sm" 
-                    onClick={() => i18n.changeLanguage('en')}
+                  <Button
+                    variant={currentLang === 'en' ? 'default' : 'outline'}
+                    size="sm"
+                    asChild
                   >
-                    EN
+                    <a href={langHref('en')} hrefLang="en" lang="en">EN</a>
                   </Button>
-                  <Button 
-                    variant={i18n.language === 'fr' ? 'default' : 'outline'} 
-                    size="sm" 
-                    onClick={() => i18n.changeLanguage('fr')}
+                  <Button
+                    variant={currentLang === 'fr' ? 'default' : 'outline'}
+                    size="sm"
+                    asChild
                   >
-                    FR
+                    <a href={langHref('fr')} hrefLang="fr" lang="fr">FR</a>
                   </Button>
                 </div>
               </div>

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useTranslation } from "react-i18next";
 
-const heroImage = "/generated_images/Hero_background_office_workspace_03f6ce3c.png";
+const heroImage = "/generated_images/Hero_background_office_workspace_03f6ce3c.webp";
 
 export function Hero() {
   const { t } = useTranslation();
@@ -19,9 +19,14 @@ export function Hero() {
       ref={ref}
       className="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+      <img
+        src={heroImage}
+        alt=""
+        width={1408}
+        height={768}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
       

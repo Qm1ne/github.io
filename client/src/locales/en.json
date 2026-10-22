@@ -5,9 +5,9 @@
     "book_consultation": "Book Consultation"
   },
   "hero": {
-    "headline_1": "Transform Your Business with",
-    "headline_2": "AI Automation Tunisia",
-    "subtext": "Expert AI agency Tunisia offering predictive analytics, AI solutions Tunisia, and digital transformation Tunisia. We streamline your workflows, ensure seamless CRM integration Tunisia, and boost AI lead generation Tunisia.",
+    "headline_1": "AI automation for businesses in",
+    "headline_2": "Tunisia",
+    "subtext": "We build and run the workflows behind your admin work: document generation, CRM updates and lead follow-up, using n8n, Make and custom AI agents.",
     "get_started": "Get Started",
     "learn_more": "Learn More"
   },
@@ -25,7 +25,7 @@
   },
   "banner": {
     "title": "Ready to Scale Your Business with AI?",
-    "subtitle": "Join leading businesses in Tunisia that trust us to deliver intelligent automation solutions",
+    "subtitle": "Tell us which process costs your team the most time, and we will walk you through what automating it would involve.",
     "cta": "Schedule Your Free Consultation"
   },
   "testimonials": {
@@ -45,13 +45,13 @@
     "title": "Resources & Case Studies",
     "subtitle": "Learn from our success stories and explore automation insights",
     "c1_title": "Automating STEG Photovoltaic Document Generation with AI",
-    "c1_desc": "How we helped solar installers in Tunisia automate the generation of STEG photovoltaic required documents using n8n automation Tunisia.",
+    "c1_desc": "How solar installers stopped assembling STEG photovoltaic paperwork by hand, with an n8n workflow that builds it from the site survey data.",
     "c1_type": "Case Study",
     "c2_title": "CRM Integration Success Story",
-    "c2_desc": "Transforming sales operations through seamless HubSpot CRM integration Tunisia and AI-powered lead scoring.",
+    "c2_desc": "How a Tunis e-commerce team brought their customer data into HubSpot and automated lead routing, so enquiries reach the right rep straight away.",
     "c2_type": "Blog Post",
     "c3_title": "Scaling Lead Generation with n8n",
-    "c3_desc": "A comprehensive guide to building automated AI lead generation systems that deliver qualified prospects daily.",
+    "c3_desc": "A walkthrough of an n8n workflow that finds B2B prospects, drafts personalised outreach and hands replies over to the sales team.",
     "c3_type": "Tutorial",
     "read_more": "Read More"
   },
@@ -96,12 +96,36 @@
     "connect": "Connect With Us",
     "all_rights": "AutomateTN. All rights reserved.",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "language": "Language"
   },
   "home": {
     "success_title": "Message sent successfully!",
     "success_desc": "We'll get back to you within 24 hours.",
     "error_title": "Failed to send message",
     "error_desc": "Please try again or contact us directly."
+  },
+  "seo": {
+    "home_title": "aiautomateTN | AI Automation Agency in Tunisia",
+    "home_desc": "AI automation for businesses in Tunisia: n8n and Make workflows, document generation, CRM integration and lead follow-up. Book a free consultation.",
+    "articles": {
+      "steg-document-generator": {
+        "title": "Automating STEG photovoltaic documents | aiautomateTN",
+        "desc": "How an n8n workflow builds STEG photovoltaic paperwork from site survey data, cutting the admin time on each solar installation in Tunisia."
+      },
+      "crm-integration": {
+        "title": "HubSpot CRM integration case study | aiautomateTN",
+        "desc": "How a Tunis e-commerce team consolidated customer data in HubSpot and automated lead routing, so every enquiry reaches the right sales rep."
+      },
+      "scaling-lead-generation": {
+        "title": "Automated B2B lead generation with n8n | aiautomateTN",
+        "desc": "A walkthrough of an n8n workflow that finds B2B prospects, drafts personalised outreach and passes replies to the sales team."
+      }
+    }
+  },
+  "notFound": {
+    "title": "This page does not exist",
+    "desc": "The link may be out of date, or the page may have moved. The home page has our services and case studies.",
+    "back_home": "Back to home"
   }
 }

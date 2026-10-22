@@ -1,21 +1,28 @@
-import { SiLinkedin, SiFacebook, SiX } from "react-icons/si";
+import { SiLinkedin, SiFacebook } from "react-icons/si";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useTranslation } from "react-i18next";
+import { pathForLang, type Lang } from "@/lib/routing";
 
 export function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { ref, isVisible } = useScrollAnimation();
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    contactSection?.scrollIntoView({ behavior: "smooth" });
-  };
+  const [location] = useLocation();
 
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById("services");
-    servicesSection?.scrollIntoView({ behavior: "smooth" });
-  };
+  // Plain links rather than scroll handlers: they are crawlable, and they work
+  // from the article pages, which have no services or contact section.
+  const currentLang: Lang = i18n.language === "fr" ? "fr" : "en";
+  const home = pathForLang("/", currentLang);
+  const langHref = (lang: Lang) => pathForLang(location, lang);
+
+  const langLinkClass = (lang: Lang) =>
+    `text-sm transition-colors ${
+      currentLang === lang
+        ? "text-foreground font-semibold"
+        : "text-muted-foreground hover:text-foreground"
+    }`;
 
   return (
     <footer ref={ref} className="bg-muted/30 pt-12 lg:pt-16 pb-8">
@@ -40,20 +47,20 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">{t('footer.quick_links')}</h3>
             <nav className="flex flex-col gap-2">
-              <button
-                onClick={scrollToServices}
-                className="text-muted-foreground hover:text-foreground transition-colors text-left"
+              <a
+                href={`${home}#services`}
+                className="text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-services"
               >
                 {t('footer.services')}
-              </button>
-              <button
-                onClick={scrollToContact}
-                className="text-muted-foreground hover:text-foreground transition-colors text-left"
+              </a>
+              <a
+                href={`${home}#contact`}
+                className="text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-footer-contact"
               >
                 {t('footer.contact')}
-              </button>
+              </a>
               <a
                 href="https://calendly.com/aiautomatetn/30min"
                 target="_blank"
@@ -90,22 +97,6 @@ export function Footer() {
                 size="icon"
                 asChild
                 className="hover-elevate"
-                data-testid="button-social-twitter"
-              >
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter"
-                >
-                  <SiX className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                asChild
-                className="hover-elevate"
                 data-testid="button-social-facebook"
               >
                 <a
@@ -118,6 +109,30 @@ export function Footer() {
                 </a>
               </Button>
             </div>
+
+            <h3 className="font-semibold text-foreground pt-2">{t('footer.language')}</h3>
+            <nav className="flex gap-4" aria-label={t('footer.language')}>
+              <a
+                href={langHref('en')}
+                hrefLang="en"
+                lang="en"
+                aria-current={currentLang === 'en' ? 'page' : undefined}
+                className={langLinkClass('en')}
+                data-testid="link-footer-lang-en"
+              >
+                English
+              </a>
+              <a
+                href={langHref('fr')}
+                hrefLang="fr"
+                lang="fr"
+                aria-current={currentLang === 'fr' ? 'page' : undefined}
+                className={langLinkClass('fr')}
+                data-testid="link-footer-lang-fr"
+              >
+                Français
+              </a>
+            </nav>
           </div>
         </div>
 

@@ -5,9 +5,9 @@
     "book_consultation": "Réserver une Consultation"
   },
   "hero": {
-    "headline_1": "Transformez Votre Entreprise avec",
-    "headline_2": "l'Automatisation IA Tunisie",
-    "subtext": "Agence IA Tunisie experte en transformation digitale Tunisie. Nous optimisons vos processus avec l'intelligence artificielle Tunisie, assurons une intégration CRM Tunisie, et stimulons le marketing automation Tunisie avec des solutions de pointe.",
+    "headline_1": "L'automatisation IA pour les entreprises en",
+    "headline_2": "Tunisie",
+    "subtext": "Nous construisons et exploitons les workflows derrière votre travail administratif : génération de documents, mise à jour du CRM et suivi des prospects, avec n8n, Make et des agents IA sur mesure.",
     "get_started": "Commencer",
     "learn_more": "En Savoir Plus"
   },
@@ -25,7 +25,7 @@
   },
   "banner": {
     "title": "Prêt à Développer Votre Entreprise avec l'IA ?",
-    "subtitle": "Rejoignez les entreprises de premier plan en Tunisie qui nous font confiance pour fournir des solutions d'automatisation intelligentes",
+    "subtitle": "Dites-nous quel processus coûte le plus de temps à votre équipe, et nous vous expliquerons ce qu'impliquerait son automatisation.",
     "cta": "Planifier Votre Consultation Gratuite"
   },
   "testimonials": {
@@ -45,13 +45,13 @@
     "title": "Ressources et Études de Cas",
     "subtitle": "Apprenez de nos succès et explorez des informations sur l'automatisation",
     "c1_title": "Automatisation des Dossiers Photovoltaïques STEG avec l'IA",
-    "c1_desc": "Comment nous avons aidé des installateurs solaires à automatiser la génération des dossiers STEG avec n8n automatisation Tunisie.",
+    "c1_desc": "Comment des installateurs solaires ont cessé de monter les dossiers photovoltaïques STEG à la main, grâce à un workflow n8n qui les génère depuis les données de visite.",
     "c1_type": "Étude de cas",
     "c2_title": "Succès de l'Intégration CRM",
-    "c2_desc": "Transformer les opérations de vente avec une intégration CRM Tunisie transparente et l'évaluation des leads par IA.",
+    "c2_desc": "Comment une équipe e-commerce de Tunis a regroupé ses données clients dans HubSpot et automatisé l'attribution des leads, pour que chaque demande arrive au bon commercial.",
     "c2_type": "Article de Blog",
     "c3_title": "Mise à l'Échelle de la Génération de Leads avec n8n",
-    "c3_desc": "Un guide complet pour créer des systèmes de génération de leads IA qui fournissent quotidiennement des prospects qualifiés.",
+    "c3_desc": "Le détail d'un workflow n8n qui identifie des prospects B2B, rédige des messages personnalisés et transmet les réponses à l'équipe commerciale.",
     "c3_type": "Tutoriel",
     "read_more": "Lire la suite"
   },
@@ -96,12 +96,36 @@
     "connect": "Rejoignez-nous",
     "all_rights": "AutomateTN. Tous droits réservés.",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "language": "Langue"
   },
   "home": {
     "success_title": "Message envoyé avec succès !",
     "success_desc": "Nous vous répondrons dans les 24 heures.",
     "error_title": "Échec de l'envoi du message",
     "error_desc": "Veuillez réessayer ou nous contacter directement."
+  },
+  "seo": {
+    "home_title": "aiautomateTN | Agence d'automatisation IA en Tunisie",
+    "home_desc": "Automatisation IA pour les entreprises en Tunisie : workflows n8n et Make, génération de documents, intégration CRM et suivi des prospects.",
+    "articles": {
+      "steg-document-generator": {
+        "title": "Dossiers photovoltaïques STEG automatisés | aiautomateTN",
+        "desc": "Comment un workflow n8n génère les dossiers photovoltaïques STEG à partir des données de visite et réduit le temps administratif par installation."
+      },
+      "crm-integration": {
+        "title": "Étude de cas : intégration CRM HubSpot | aiautomateTN",
+        "desc": "Comment une équipe e-commerce de Tunis a regroupé ses données clients dans HubSpot et automatisé l'attribution des leads à ses commerciaux."
+      },
+      "scaling-lead-generation": {
+        "title": "Génération de leads B2B avec n8n | aiautomateTN",
+        "desc": "Le détail d'un workflow n8n qui identifie des prospects B2B, rédige des messages personnalisés et transmet les réponses à l'équipe commerciale."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Cette page n'existe pas",
+    "desc": "Le lien est peut-être périmé ou la page a été déplacée. La page d'accueil présente nos services et nos études de cas.",
+    "back_home": "Retour à l'accueil"
   }
 }

@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useTranslation } from "react-i18next";
 
-const bannerImage = "/generated_images/Banner_section_gradient_tech_e48f2140.png";
+const bannerImage = "/generated_images/Banner_section_gradient_tech_e48f2140.webp";
 
 export function Banner() {
   const { t } = useTranslation();
