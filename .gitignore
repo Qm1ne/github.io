@@ -5,3 +5,10 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Credentials, raw provider captures and private SEO work stay out of this
+# public repo. The seo/ bundles contain first-party search-query data.
+*.env
+.seo-keys/
+seo/
+*service-account*.json
