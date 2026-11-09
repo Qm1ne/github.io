@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
@@ -44,37 +43,6 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
     }
   }, [isSuccess, form]);
 
-  const handleSubmit = async (data: InsertContactSubmission) => {
-    // Send via EmailJS first (client-side). Template fields: name, Phone, email, message
-    const emailPayload = {
-      name: data.name,
-      Phone: data.phone,
-      email: data.email,
-      message: data.message,
-    };
-    
-    // eslint-disable-next-line no-console
-    console.log("Attempting to send email with payload:", emailPayload);
-    
-    try {
-      const response = await emailjs.send(
-        "service_csz2oen",
-        "template_jfhhfs4",
-        emailPayload,
-        "bztEB7S1n0g91s85-"
-      );
-      // eslint-disable-next-line no-console
-      console.log("EmailJS response:", response);
-    } catch (err) {
-      // Log errors but continue with existing onSubmit flow so UI behaviour doesn't change
-      // eslint-disable-next-line no-console
-      console.error("EmailJS send error:", err);
-    }
-
-    // Continue with existing submission flow (server, DB, toast, etc.)
-    onSubmit(data);
-  };
-
   return (
     <section id="contact" ref={ref} className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6">
@@ -95,7 +63,7 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
         }`}>
           <div className="lg:col-span-3">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
                   control={form.control}
                   name="name"

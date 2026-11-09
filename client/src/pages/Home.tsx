@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
+import emailjs from "@emailjs/browser";
 import { type InsertContactSubmission } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
@@ -12,13 +12,24 @@ import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { useTranslation } from "react-i18next";
 
+// The site is served as static files, so the contact form is delivered by
+// EmailJS. Its result is what decides success: there is no server behind this.
+const EMAILJS_SERVICE_ID = "service_csz2oen";
+const EMAILJS_TEMPLATE_ID = "template_jfhhfs4";
+
 export default function Home() {
   const { t } = useTranslation();
   const { toast } = useToast();
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContactSubmission) => {
-      return apiRequest("POST", "/api/contact", data);
+      // Template fields: name, Phone, email, message.
+      return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        name: data.name,
+        Phone: data.phone,
+        email: data.email,
+        message: data.message,
+      });
     },
     onSuccess: () => {
       toast({
