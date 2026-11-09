@@ -69,35 +69,47 @@ export function Testimonials() {
               <ChevronLeft className="h-5 w-5" />
             </Button>
 
-            <Card className="flex-1 p-8 lg:p-12">
-              <div className="space-y-6">
-                <Quote className="h-10 w-10 text-primary/20" />
-                <p
-                  className="text-lg lg:text-xl text-foreground leading-relaxed"
-                  data-testid={`text-testimonial-quote-${currentIndex}`}
-                >
-                  "{testimonials[currentIndex].quote}"
-                </p>
-                <div className="flex items-center gap-4 pt-4">
-                  <Avatar className="h-12 w-12">
-                    <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                      {testimonials[currentIndex].initials}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <p
-                      className="font-semibold text-foreground"
-                      data-testid={`text-testimonial-author-${currentIndex}`}
-                    >
-                      {testimonials[currentIndex].author}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {testimonials[currentIndex].position}
-                    </p>
-                  </div>
-                </div>
+            {/* All three quotes are rendered as a sliding track rather than
+                one at a time, so every testimonial is present in the HTML for
+                crawlers and readers without scripting. */}
+            <div className="flex-1 overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <Card key={index} className="w-full shrink-0 p-8 lg:p-12">
+                    <div className="space-y-6">
+                      <Quote className="h-10 w-10 text-primary/20" />
+                      <p
+                        className="text-lg lg:text-xl text-foreground leading-relaxed"
+                        data-testid={`text-testimonial-quote-${index}`}
+                      >
+                        "{testimonial.quote}"
+                      </p>
+                      <div className="flex items-center gap-4 pt-4">
+                        <Avatar className="h-12 w-12">
+                          <AvatarFallback className="bg-primary/10 text-primary font-semibold">
+                            {testimonial.initials}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <p
+                            className="font-semibold text-foreground"
+                            data-testid={`text-testimonial-author-${index}`}
+                          >
+                            {testimonial.author}
+                          </p>
+                          <p className="text-sm text-muted-foreground">
+                            {testimonial.position}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
               </div>
-            </Card>
+            </div>
 
             <Button
               variant="outline"
