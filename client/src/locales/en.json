@@ -30,7 +30,7 @@
   },
   "testimonials": {
     "title": "What Our Clients Say",
-    "subtitle": "Real results from businesses we've helped transform",
+    "subtitle": "Two clients, in their own words.",
     "t1_quote": "The AI automation solutions transformed my work completely.",
     "t1_author": "Anis Heni",
     "t1_pos": "Energy Auditor, Freelance",
@@ -118,11 +118,126 @@
         "title": "Automated B2B lead generation with n8n | aiautomateTN",
         "desc": "A walkthrough of an n8n workflow that finds B2B prospects, drafts personalised outreach and passes replies to the sales team."
       }
+    },
+    "landings": {
+      "solar": {
+        "title": "STEG photovoltaic paperwork, automated | aiautomateTN",
+        "desc": "Turn PV site survey data into a ready-to-submit STEG application pack in minutes instead of four hours. Every file is checked by a person before submission."
+      },
+      "auditors": {
+        "title": "Draft energy audit reports from site photos | aiautomateTN",
+        "desc": "Turn a batch of site photos into a structured draft write-up across 13 building components in about 20 minutes. The auditor reviews and signs every report."
+      }
     }
   },
   "notFound": {
     "title": "This page does not exist",
     "desc": "The link may be out of date, or the page may have moved. The home page has our services and case studies.",
     "back_home": "Back to home"
+  },
+  "landings": {
+    "solar": {
+      "hero_eyebrow": "For solar installers in Tunisia",
+      "hero_title": "Four hours of STEG paperwork, assembled in about three minutes",
+      "hero_subtext": "The site survey data you already collect goes in. A complete photovoltaic application pack comes out, in the format STEG expects, for you to read and submit.",
+      "hero_cta": "Book a 30-minute walkthrough",
+      "hero_note": "Half an hour, and nothing to install beforehand.",
+      "problem_title": "What the paperwork costs you now",
+      "problem_body": "A photovoltaic application is the same information written out many times over: the client, the site, the panel and inverter models, the sizing figures, the references that tie the drawings together. The survey is the easy part. Turning it into a complete file is where the afternoon goes.",
+      "problem_1": "Up to four hours per file, most of it retyping numbers someone already wrote down on site.",
+      "problem_2": "One figure copied across wrongly travels into every document that references it.",
+      "problem_3": "The file waits for an afternoon that nobody in the office has, so the installation date moves.",
+      "steps_title": "How it works",
+      "steps_subtitle": "Three steps, and the only one that needs your judgement is the last.",
+      "steps_1_title": "Send the survey data",
+      "steps_1_body": "Client, location, panel and inverter models, the sizing figures. The same information that comes back from a site visit, entered once.",
+      "steps_2_title": "The workflow writes the pack",
+      "steps_2_body": "It checks the figures, runs the calculations and writes every document from them in the format STEG expects. One run covers a pack of around ten documents.",
+      "steps_3_title": "You check it and submit",
+      "steps_3_body": "The pack comes back ready to read. Check it against the site you visited, sign it, and file it with STEG yourself.",
+      "verified_title": "A person signs it, not a model",
+      "verified_body": "What comes out is a draft. A photovoltaic application is a government document, and a government document gets read by somebody who knows the site before it is submitted. The workflow does the typing and the arithmetic. What gets filed stays your responsibility.",
+      "proof_title": "Where this came from",
+      "proof_label": "Case study",
+      "proof_body": "Built for installers who were assembling application packs by hand from survey sheets. The tool is public, so you can generate a file yourself before you ever speak to us.",
+      "proof_metric": "Up to four hours per file, down to minutes",
+      "proof_metric_note": "About three minutes per run, measured across a pack of around ten documents. Your reading and checking time is on top of that.",
+      "proof_link": "Read the case study",
+      "tool_cta": "See the tool",
+      "faq_title": "Questions installers ask first",
+      "faq_1_q": "What does it cost, and how soon does it run?",
+      "faq_1_a": "We quote per build after a call. The price follows how many documents your pack contains and how your survey data arrives today: a form, a spreadsheet or paper. You get the figure in writing after the call.",
+      "faq_2_q": "Where does our client data go?",
+      "faq_3_q": "Who checks the file before it reaches STEG?",
+      "faq_2_a": "Survey data and client details pass through the workflow and the language model that writes the documents. Where it is hosted is part of the build: your own server and storage, or ours. Bring whatever your client contracts require to the call and we build to that.",
+      "faq_3_a": "You do. Nothing is submitted automatically and the workflow has no route to STEG. It produces the pack. Someone in your office reads it and files it.",
+      "faq_4_q": "What if STEG sends the file back?",
+      "faq_4_a": "Correct the source figure and run it again, which takes minutes rather than another afternoon. If the rejection is about a changed requirement rather than your data, that is a template update on our side and the next run picks it up.",
+      "final_title": "Bring a file you are working on now",
+      "final_body": "Half an hour, your own survey data, and you see what comes out the other end.",
+      "final_cta": "Book a 30-minute walkthrough",
+      "final_whatsapp": "Ask on WhatsApp"
+    },
+    "auditors": {
+      "hero_eyebrow": "For building energy auditors",
+      "hero_title": "From site photos to a draft audit write-up in about twenty minutes",
+      "hero_subtext": "Upload the batch from the visit. Each of thirteen component categories, from roof and facades through to windows, plumbing and heating, is read by its own agent. You get a structured technical draft to edit instead of a blank page.",
+      "hero_cta": "Book a 30-minute walkthrough",
+      "hero_note": "Half an hour, and you can bring photos from a real visit.",
+      "problem_title": "What the write-up costs you now",
+      "problem_body": "The visit takes a couple of hours. The report takes the rest of the week. Every component needs its own paragraph: what it is made of, what condition it is in, how it performs thermally, what you recommend and in what order. The photos are all sitting on the drive. The writing still starts from nothing.",
+      "problem_1": "Several hours per building, spent describing things you have already seen with your own eyes.",
+      "problem_2": "Hundreds of photos to sort by component before you can write a word about any of them.",
+      "problem_3": "Thirteen categories to cover, and the last one gets the least attention because it is last.",
+      "steps_title": "How it works",
+      "steps_subtitle": "You upload once and review once. The sorting in between stops being your job.",
+      "steps_1_title": "Drop in the photo batch",
+      "steps_1_body": "The whole set from the visit, in whatever order the camera left them. Grouping them by component is the pipeline's first job, not yours.",
+      "steps_2_title": "Each component gets its own agent",
+      "steps_2_body": "A vision agent per category reads the photos assigned to it, judges materials, visible condition and thermal performance, then writes that section with its recommendations in priority order. Thirteen categories, covered end to end.",
+      "steps_3_title": "You review and finish it",
+      "steps_3_body": "The draft comes back in the shape a DPE-style report needs. Correct what the photos could not show, add what only the visit told you, and sign it.",
+      "verified_title": "A draft for an auditor, not a certificate",
+      "verified_body": "This is a base report. It is not a finished audit and it is not a certification. An energy audit is a regulated document and the judgement in it belongs to the auditor. The pipeline reads the photos and writes the first version. You are the one who checks it, corrects it and puts your name on it.",
+      "proof_title": "Where this came from",
+      "proof_label": "Case study",
+      "proof_body": "Built in Tunis with an energy auditor who was writing every component observation from scratch after each visit. The multi-agent structure is also why a fourteenth category is a configuration change rather than a rebuild.",
+      "proof_metric": "Several hours of drafting, down to about twenty minutes",
+      "proof_metric_note": "About twenty minutes per run for the system itself. Your review and edits are on top, and how long those take depends on the building and how much you change.",
+      "proof_link": "Read the case study",
+      "faq_title": "Questions auditors ask first",
+      "faq_1_q": "What does it cost, and how soon does it run?",
+      "faq_1_a": "We quote per build after a call. The price follows how many component categories you need and how many photos a typical visit produces. You get the figure in writing after the call.",
+      "faq_2_q": "Where do the site photos go?",
+      "faq_2_a": "The photos are sent to the vision model that reads them, and the write-up comes back through the workflow. Where everything is hosted is part of the build: your own storage, or ours. Tell us what your client agreements require and we build to that.",
+      "faq_3_q": "Who checks the report before the client sees it?",
+      "faq_3_a": "You do. The draft arrives as a draft and nothing leaves the workflow on its own. The report your client receives is the one you have read, edited and signed.",
+      "faq_4_q": "What if the photos missed something?",
+      "faq_4_a": "Then that section comes back thin and you fill it from your own notes. An agent writes about what it can see in the photographs; it cannot describe a boiler nobody photographed. That is the other reason the output is a draft.",
+      "final_title": "Bring photos from your last visit",
+      "final_body": "Half an hour, one real building, and you see the draft it produces.",
+      "final_cta": "Book a 30-minute walkthrough",
+      "final_whatsapp": "Ask on WhatsApp"
+    }
+  },
+  "energy": {
+    "eyebrow": "Featured: energy sector",
+    "title": "Two workflows built for energy paperwork",
+    "subtitle": "Everything else we do is further down this page. These two exist for specific documents, and each has a real build behind it.",
+    "c1_title": "Solar installers",
+    "c1_desc": "STEG photovoltaic application packs, assembled from your site survey data in minutes instead of up to four hours.",
+    "c1_cta": "For solar installers",
+    "c2_title": "Energy auditors",
+    "c2_desc": "Site photos turned into a structured draft report across thirteen building components, ready for you to review.",
+    "c2_cta": "For energy auditors"
+  },
+  "who": {
+    "title": "Who builds this",
+    "body": "Built by Amine Arous, with three years of experience as a project engineer on automation and reporting systems at STEG International Services.",
+    "note": "aiautomateTN is independent. It is not affiliated with, endorsed by, or acting on behalf of STEG or STEG International Services."
+  },
+  "whatsapp": {
+    "message": "Hello, I have a question about your automation work. I came from aiautomatetn.com.",
+    "aria": "Chat with us on WhatsApp"
   }
 }
