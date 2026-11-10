@@ -30,7 +30,7 @@
   },
   "testimonials": {
     "title": "Ce Que Disent Nos Clients",
-    "subtitle": "De vrais résultats d'entreprises que nous avons aidées à se transformer",
+    "subtitle": "Deux clients, dans leurs propres mots.",
     "t1_quote": "Les solutions d'automatisation IA ont complètement transformé mon travail.",
     "t1_author": "Anis Heni",
     "t1_pos": "Auditeur Énergétique, Indépendant",
@@ -118,11 +118,126 @@
         "title": "Génération de leads B2B avec n8n | aiautomateTN",
         "desc": "Le détail d'un workflow n8n qui identifie des prospects B2B, rédige des messages personnalisés et transmet les réponses à l'équipe commerciale."
       }
+    },
+    "landings": {
+      "solar": {
+        "title": "Dossiers photovoltaïques STEG automatisés | aiautomateTN",
+        "desc": "Transformez vos données de visite en dossier STEG prêt à déposer, en minutes au lieu de quatre heures. Chaque dossier est vérifié par une personne avant dépôt."
+      },
+      "auditors": {
+        "title": "Brouillon d'audit énergétique depuis vos photos | aiautomateTN",
+        "desc": "Transformez un lot de photos de visite en brouillon structuré sur 13 composants, en vingt minutes environ. L'auditeur relit et signe chaque rapport."
+      }
     }
   },
   "notFound": {
     "title": "Cette page n'existe pas",
     "desc": "Le lien est peut-être périmé ou la page a été déplacée. La page d'accueil présente nos services et nos études de cas.",
     "back_home": "Retour à l'accueil"
+  },
+  "landings": {
+    "solar": {
+      "hero_eyebrow": "Pour les installateurs solaires en Tunisie",
+      "hero_title": "Quatre heures de dossier STEG, assemblées en trois minutes environ",
+      "hero_subtext": "Les données de votre visite technique entrent. Un dossier de demande photovoltaïque complet en sort, au format attendu par la STEG, à relire et à déposer.",
+      "hero_cta": "Réserver 30 minutes de démonstration",
+      "hero_note": "Une demi-heure, et rien à installer au préalable.",
+      "problem_title": "Ce que la paperasse vous coûte aujourd'hui",
+      "problem_body": "Une demande photovoltaïque, c'est la même information recopiée de nombreuses fois : le client, le site, les modèles de panneaux et d'onduleur, les calculs de dimensionnement, les références qui relient les plans entre eux. La visite est la partie facile. C'est la mise en dossier qui prend l'après-midi.",
+      "problem_1": "Jusqu'à quatre heures par dossier, passées pour l'essentiel à recopier des chiffres déjà notés sur site.",
+      "problem_2": "Un chiffre mal recopié se propage dans tous les documents qui s'y réfèrent.",
+      "problem_3": "Le dossier attend un après-midi que personne n'a au bureau, et la date d'installation recule.",
+      "steps_title": "Comment ça marche",
+      "steps_subtitle": "Trois étapes, et la seule qui demande votre jugement est la dernière.",
+      "steps_1_title": "Transmettez les données de visite",
+      "steps_1_body": "Client, localisation, modèles de panneaux et d'onduleur, chiffres de dimensionnement. Les informations qui reviennent d'une visite de site, saisies une seule fois.",
+      "steps_2_title": "Le workflow rédige le dossier",
+      "steps_2_body": "Il contrôle les chiffres, exécute les calculs et rédige chaque document à partir de ceux-ci, au format attendu par la STEG. Une exécution couvre un dossier d'une dizaine de documents.",
+      "steps_3_title": "Vous vérifiez et vous déposez",
+      "steps_3_body": "Le dossier revient prêt à relire. Vérifiez-le par rapport au site que vous avez visité, signez-le et déposez-le vous-même auprès de la STEG.",
+      "verified_title": "C'est une personne qui signe, pas un modèle",
+      "verified_body": "Ce qui sort est un brouillon. Une demande photovoltaïque est un document administratif, et un document administratif est relu par quelqu'un qui connaît le site avant d'être déposé. Le workflow fait la saisie et les calculs. Ce qui est déposé reste votre responsabilité.",
+      "proof_title": "D'où vient ce projet",
+      "proof_label": "Étude de cas",
+      "proof_body": "Développé pour des installateurs qui montaient leurs dossiers à la main à partir des fiches de visite. L'outil est public : vous pouvez générer un dossier vous-même avant même de nous parler.",
+      "proof_metric": "Jusqu'à quatre heures par dossier, ramenées à quelques minutes",
+      "proof_metric_note": "Environ trois minutes par exécution, mesurées sur un dossier d'une dizaine de documents. Votre temps de relecture et de vérification s'y ajoute.",
+      "proof_link": "Lire l'étude de cas",
+      "tool_cta": "Voir l'outil",
+      "faq_title": "Les questions que les installateurs posent en premier",
+      "faq_1_q": "Combien ça coûte, et sous quel délai ?",
+      "faq_1_a": "Nous chiffrons chaque projet après un échange. Le prix dépend du nombre de documents de votre dossier et de la forme sous laquelle arrivent aujourd'hui vos données de visite : un formulaire, un tableur ou du papier. Vous recevez le chiffrage par écrit après l'appel.",
+      "faq_2_q": "Où vont les données de nos clients ?",
+      "faq_2_a": "Les données de visite et les coordonnées des clients passent par le workflow et par le modèle de langage qui rédige les documents. L'hébergement fait partie du projet : votre propre serveur et votre stockage, ou les nôtres. Dites-nous ce qu'exigent vos contrats clients et nous construisons en conséquence.",
+      "faq_3_q": "Qui vérifie le dossier avant la STEG ?",
+      "faq_3_a": "Vous. Rien n'est déposé automatiquement et le workflow n'a aucun accès à la STEG. Il produit le dossier. Quelqu'un de votre bureau le relit et le dépose.",
+      "faq_4_q": "Et si la STEG renvoie le dossier ?",
+      "faq_4_a": "Vous corrigez la donnée d'origine et vous relancez, ce qui prend quelques minutes au lieu d'un nouvel après-midi. Si le refus porte sur une exigence qui a changé plutôt que sur vos données, c'est une mise à jour de modèle de notre côté et l'exécution suivante en tient compte.",
+      "final_title": "Apportez un dossier en cours",
+      "final_body": "Une demi-heure, vos propres données de visite, et vous voyez ce qui sort à l'autre bout.",
+      "final_cta": "Réserver 30 minutes de démonstration",
+      "final_whatsapp": "Poser une question sur WhatsApp"
+    },
+    "auditors": {
+      "hero_eyebrow": "Pour les auditeurs énergétiques du bâtiment",
+      "hero_title": "Des photos de visite à un brouillon de rapport en vingt minutes environ",
+      "hero_subtext": "Vous déposez le lot de photos de la visite. Chacune des treize catégories de composants, de la toiture et des façades aux menuiseries, à la plomberie et au chauffage, est analysée par son propre agent. Vous récupérez un brouillon technique structuré à corriger, au lieu d'une page blanche.",
+      "hero_cta": "Réserver 30 minutes de démonstration",
+      "hero_note": "Une demi-heure, et vous pouvez apporter les photos d'une vraie visite.",
+      "problem_title": "Ce que la rédaction vous coûte aujourd'hui",
+      "problem_body": "La visite prend deux heures. Le rapport prend le reste de la semaine. Chaque composant demande son paragraphe : les matériaux, l'état constaté, la performance thermique, vos recommandations et leur ordre de priorité. Les photos sont toutes sur le disque. La rédaction, elle, part de zéro.",
+      "problem_1": "Plusieurs heures par bâtiment, passées à décrire ce que vous avez déjà vu de vos yeux.",
+      "problem_2": "Des centaines de photos à trier par composant avant de pouvoir en écrire une ligne.",
+      "problem_3": "Treize catégories à couvrir, et la dernière reçoit le moins d'attention parce qu'elle est la dernière.",
+      "steps_title": "Comment ça marche",
+      "steps_subtitle": "Vous déposez une fois et vous relisez une fois. Le tri intermédiaire cesse d'être votre travail.",
+      "steps_1_title": "Déposez le lot de photos",
+      "steps_1_body": "L'ensemble de la visite, dans l'ordre où l'appareil les a laissées. Le regroupement par composant est le premier travail du pipeline, pas le vôtre.",
+      "steps_2_title": "Chaque composant a son agent",
+      "steps_2_body": "Un agent de vision par catégorie analyse les photos qui lui sont attribuées, juge les matériaux, l'état visible et la performance thermique, puis rédige sa section avec des recommandations classées par priorité. Treize catégories, traitées de bout en bout.",
+      "steps_3_title": "Vous relisez et vous finalisez",
+      "steps_3_body": "Le brouillon revient dans la forme qu'attend un rapport de type DPE. Corrigez ce que les photos ne pouvaient pas montrer, ajoutez ce que seule la visite vous a appris, et signez.",
+      "verified_title": "Un brouillon pour un auditeur, pas un certificat",
+      "verified_body": "Il s'agit d'un rapport de base. Ce n'est ni un audit finalisé, ni une certification. Un audit énergétique est un document réglementé et le jugement qu'il contient appartient à l'auditeur. Le pipeline analyse les photos et rédige la première version. C'est vous qui la vérifiez, la corrigez et y mettez votre nom.",
+      "proof_title": "D'où vient ce projet",
+      "proof_label": "Étude de cas",
+      "proof_body": "Développé à Tunis avec un auditeur énergétique qui rédigeait chaque observation de composant à partir de rien après chaque visite. La structure multi-agents explique aussi pourquoi une quatorzième catégorie relève d'un réglage et non d'une refonte.",
+      "proof_metric": "Plusieurs heures de rédaction, ramenées à vingt minutes environ",
+      "proof_metric_note": "Environ vingt minutes par exécution pour le système lui-même. Votre relecture et vos corrections s'y ajoutent, et leur durée dépend du bâtiment et de l'ampleur des modifications.",
+      "proof_link": "Lire l'étude de cas",
+      "faq_title": "Les questions que les auditeurs posent en premier",
+      "faq_1_q": "Combien ça coûte, et sous quel délai ?",
+      "faq_1_a": "Nous chiffrons chaque projet après un échange. Le prix dépend du nombre de catégories de composants dont vous avez besoin et du nombre de photos qu'une visite type produit. Vous recevez le chiffrage par écrit après l'appel.",
+      "faq_2_q": "Où vont les photos des sites ?",
+      "faq_2_a": "Les photos sont transmises au modèle de vision qui les analyse, et le texte revient par le workflow. L'hébergement fait partie du projet : votre propre stockage, ou le nôtre. Dites-nous ce qu'exigent vos engagements clients et nous construisons en conséquence.",
+      "faq_3_q": "Qui vérifie le rapport avant le client ?",
+      "faq_3_a": "Vous. Le brouillon arrive comme un brouillon et rien ne quitte le workflow de lui-même. Le rapport que reçoit votre client est celui que vous avez relu, corrigé et signé.",
+      "faq_4_q": "Et si les photos ont oublié quelque chose ?",
+      "faq_4_a": "Alors la section revient incomplète et vous la complétez avec vos propres notes. Un agent écrit sur ce qu'il voit dans les photographies ; il ne peut pas décrire une chaudière que personne n'a photographiée. C'est l'autre raison pour laquelle le résultat est un brouillon.",
+      "final_title": "Apportez les photos de votre dernière visite",
+      "final_body": "Une demi-heure, un vrai bâtiment, et vous voyez le brouillon qu'il produit.",
+      "final_cta": "Réserver 30 minutes de démonstration",
+      "final_whatsapp": "Poser une question sur WhatsApp"
+    }
+  },
+  "energy": {
+    "eyebrow": "À la une : secteur de l'énergie",
+    "title": "Deux workflows conçus pour les dossiers de l'énergie",
+    "subtitle": "Tout le reste de notre travail se trouve plus bas sur cette page. Ces deux-là existent pour des documents précis, et chacun repose sur un projet réel.",
+    "c1_title": "Installateurs solaires",
+    "c1_desc": "Des dossiers de demande photovoltaïque STEG, assemblés depuis vos données de visite en quelques minutes au lieu de quatre heures.",
+    "c1_cta": "Pour les installateurs solaires",
+    "c2_title": "Auditeurs énergétiques",
+    "c2_desc": "Des photos de visite transformées en brouillon de rapport structuré sur treize composants du bâtiment, prêt à relire.",
+    "c2_cta": "Pour les auditeurs énergétiques"
+  },
+  "who": {
+    "title": "Qui est derrière",
+    "body": "Conçu par Amine Arous, fort de trois ans d'expérience comme ingénieur projet sur des systèmes d'automatisation et de reporting chez STEG International Services.",
+    "note": "aiautomateTN est indépendant. La société n'est ni affiliée à la STEG ou à STEG International Services, ni approuvée par elles, et n'agit pas pour leur compte."
+  },
+  "whatsapp": {
+    "message": "Bonjour, j'ai une question sur vos automatisations. Je viens de aiautomatetn.com.",
+    "aria": "Discuter avec nous sur WhatsApp"
   }
 }
