@@ -1,15 +1,15 @@
 {
   "nav": {
-    "free_consultation": "Consultation Gratuite",
-    "contact_us": "Contactez-nous",
-    "book_consultation": "Réserver une Consultation"
+    "free_consultation": "Réserver 30 min",
+    "contact_us": "Écrire un message",
+    "book_consultation": "Réserver 30 min"
   },
   "hero": {
     "headline_1": "L'automatisation IA pour les entreprises en",
     "headline_2": "Tunisie",
     "subtext": "Nous construisons et exploitons les workflows derrière votre travail administratif : génération de documents, mise à jour du CRM et suivi des prospects, avec n8n, Make et des agents IA sur mesure.",
-    "get_started": "Commencer",
-    "learn_more": "En Savoir Plus"
+    "get_started": "Dites-nous quoi automatiser",
+    "learn_more": "Voir ce que nous construisons"
   },
   "services": {
     "title": "Nos Services",
@@ -26,7 +26,7 @@
   "banner": {
     "title": "Prêt à Développer Votre Entreprise avec l'IA ?",
     "subtitle": "Dites-nous quel processus coûte le plus de temps à votre équipe, et nous vous expliquerons ce qu'impliquerait son automatisation.",
-    "cta": "Planifier Votre Consultation Gratuite"
+    "cta": "Réserver 30 min"
   },
   "testimonials": {
     "title": "Ce Que Disent Nos Clients",
@@ -76,23 +76,28 @@
   "contact": {
     "title": "Contactez-nous",
     "subtitle": "Prêt à transformer votre entreprise ? Discutons de vos besoins en automatisation",
-    "name_label": "Nom Complet",
+    "name_label": "Votre nom",
     "name_placeholder": "Foulen Fleny",
-    "email_label": "Adresse E-mail",
-    "email_placeholder": "jean@exemple.com",
-    "phone_label": "Numéro de Téléphone",
+    "email_label": "E-mail",
+    "email_placeholder": "foulen@example.com",
+    "phone_label": "Téléphone (facultatif)",
     "phone_placeholder": "+216 XX XXX XXX",
-    "message_label": "Message",
-    "message_placeholder": "Parlez-nous de vos besoins en automatisation...",
-    "submit": "Envoyer le Message",
-    "sending": "Envoi...",
+    "message_label": "Votre besoin",
+    "message_placeholder": "Quel processus coûte le plus de temps à votre équipe ?",
+    "submit": "Envoyer le message",
+    "sending": "Envoi en cours",
     "info_title": "Coordonnées",
     "info_email": "E-mail",
     "info_phone": "Téléphone",
     "info_location": "Emplacement",
     "info_loc_val": "Tunis, Tunisie",
     "info_hours": "Heures d'Ouverture",
-    "info_hours_val": "Lun - Ven : 9h00 - 18h00"
+    "info_hours_val": "Lun - Ven : 9h00 - 18h00",
+    "helper": "Nous répondons par e-mail. Si vous préférez en parler, réservez plutôt 30 minutes.",
+    "err_name": "Merci d'indiquer votre nom.",
+    "err_email": "Cette adresse e-mail ne semble pas valide.",
+    "err_phone": "Ce numéro de téléphone est trop long.",
+    "err_message": "Donnez-nous un peu plus de détail, pour que la réponse soit utile. Dix caractères minimum."
   },
   "footer": {
     "desc": "Transformer les entreprises en Tunisie avec des solutions d'automatisation IA de pointe.",
@@ -104,10 +109,10 @@
     "language": "Langue"
   },
   "home": {
-    "success_title": "Message envoyé avec succès !",
-    "success_desc": "Nous vous répondrons dans les 24 heures.",
-    "error_title": "Échec de l'envoi du message",
-    "error_desc": "Veuillez réessayer ou nous contacter directement."
+    "success_title": "Message envoyé",
+    "success_desc": "La réponse viendra de contact@aiautomatetn.com. WhatsApp est plus rapide en cas d'urgence.",
+    "error_title": "Votre message n'est pas parti",
+    "error_desc": "Quelque chose a échoué à l'envoi. Réessayez, ou écrivez directement à contact@aiautomatetn.com."
   },
   "seo": {
     "home_title": "aiautomateTN | Agence d'automatisation IA en Tunisie",
@@ -143,8 +148,8 @@
   },
   "notFound": {
     "title": "Cette page n'existe pas",
-    "desc": "Le lien est peut-être périmé ou la page a été déplacée. La page d'accueil présente nos services et nos études de cas.",
-    "back_home": "Retour à l'accueil"
+    "desc": "Le lien est peut-être obsolète, ou la page a été déplacée. La page d'accueil présente les services, les deux pages du secteur de l'énergie et les études de cas.",
+    "back_home": "Retour à la page d'accueil"
   },
   "landings": {
     "solar": {
@@ -252,5 +257,10 @@
   "whatsapp": {
     "message": "Bonjour, j'ai une question sur vos automatisations. Je viens de aiautomatetn.com.",
     "aria": "Discuter avec nous sur WhatsApp"
+  },
+  "booking": {
+    "opening": "Ouverture du calendrier",
+    "confirmed_title": "C'est réservé",
+    "confirmed_desc": "L'invitation arrive dans votre boîte mail. Apportez un vrai dossier, ou un vrai lot de photos, et nous le ferons tourner pendant l'appel."
   }
 }

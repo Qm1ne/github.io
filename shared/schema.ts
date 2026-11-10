@@ -31,7 +31,10 @@ export const insertContactSubmissionSchema = createInsertSchema(contactSubmissio
   createdAt: true,
 }).extend({
   email: z.string().email("Please enter a valid email address"),
-  phone: z.string().min(8, "Please enter a valid phone number"),
+  // A phone number is not required to answer an email, and demanding one costs
+  // more enquiries than it gains. Empty is allowed; the field stays a string so
+  // the type does not change.
+  phone: z.string().max(32),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 

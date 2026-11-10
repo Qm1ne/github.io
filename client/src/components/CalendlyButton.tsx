@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
+import { Loader2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button, type ButtonProps } from "@/components/ui/button";
+import { toast } from "@/hooks/use-toast";
 import {
   trackBookingConfirmed,
   trackCtaClick,
@@ -23,6 +26,12 @@ let openedFrom = "";
 let listening = false;
 
 /**
+ * The confirmation wording, in the language of the page that opened the popup.
+ * The listener lives outside React and so has no access to `t`.
+ */
+let confirmation = { title: "", description: "" };
+
+/**
  * The only honest way to record a *confirmed* booking.
  *
  * A plain link to Calendly leaves the site, and Calendly never reports back to
@@ -39,6 +48,9 @@ function listenForBookings(): void {
     const data = event.data as { event?: string } | null;
     if (data?.event !== "calendly.event_scheduled") return;
     trackBookingConfirmed({ campaign: openedFrom });
+    if (confirmation.title) {
+      toast({ title: confirmation.title, description: confirmation.description });
+    }
   });
 }
 
@@ -95,11 +107,16 @@ export function CalendlyButton({
   children,
   ...buttonProps
 }: CalendlyButtonProps) {
+  const { t } = useTranslation();
   const [opening, setOpening] = useState(false);
 
   useEffect(() => {
     listenForBookings();
-  }, []);
+    confirmation = {
+      title: t("booking.confirmed_title"),
+      description: t("booking.confirmed_desc"),
+    };
+  }, [t]);
 
   const open = useCallback(async () => {
     trackCtaClick({ location, campaign, destination: "calendly" });
@@ -118,8 +135,20 @@ export function CalendlyButton({
   }, [campaign, location]);
 
   return (
-    <Button {...buttonProps} onClick={open} disabled={opening || buttonProps.disabled}>
-      {children}
+    <Button
+      {...buttonProps}
+      onClick={open}
+      disabled={opening || buttonProps.disabled}
+      aria-live="polite"
+    >
+      {opening ? (
+        <>
+          <Loader2 className="mr-2 h-5 w-5 animate-spin" aria-hidden="true" />
+          {t("booking.opening")}
+        </>
+      ) : (
+        children
+      )}
     </Button>
   );
 }

@@ -1,15 +1,15 @@
 {
   "nav": {
-    "free_consultation": "Free Consultation",
-    "contact_us": "Contact Us",
-    "book_consultation": "Book Consultation"
+    "free_consultation": "Book a 30-min call",
+    "contact_us": "Send a message",
+    "book_consultation": "Book a 30-min call"
   },
   "hero": {
     "headline_1": "AI automation for businesses in",
     "headline_2": "Tunisia",
     "subtext": "We build and run the workflows behind your admin work: document generation, CRM updates and lead follow-up, using n8n, Make and custom AI agents.",
-    "get_started": "Get Started",
-    "learn_more": "Learn More"
+    "get_started": "Tell us what to automate",
+    "learn_more": "See what we build"
   },
   "services": {
     "title": "Our Services",
@@ -26,7 +26,7 @@
   "banner": {
     "title": "Ready to Scale Your Business with AI?",
     "subtitle": "Tell us which process costs your team the most time, and we will walk you through what automating it would involve.",
-    "cta": "Schedule Your Free Consultation"
+    "cta": "Book a 30-min call"
   },
   "testimonials": {
     "title": "What Our Clients Say",
@@ -76,23 +76,28 @@
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Ready to transform your business? Let's discuss your automation needs",
-    "name_label": "Full Name",
+    "name_label": "Your name",
     "name_placeholder": "Foulen Fleny",
-    "email_label": "Email Address",
-    "email_placeholder": "john@example.com",
-    "phone_label": "Phone Number",
+    "email_label": "Email",
+    "email_placeholder": "foulen@example.com",
+    "phone_label": "Phone (optional)",
     "phone_placeholder": "+216 XX XXX XXX",
-    "message_label": "Message",
-    "message_placeholder": "Tell us about your automation needs...",
-    "submit": "Send Message",
-    "sending": "Sending...",
+    "message_label": "What you need",
+    "message_placeholder": "Which process costs your team the most time?",
+    "submit": "Send message",
+    "sending": "Sending",
     "info_title": "Contact Information",
     "info_email": "Email",
     "info_phone": "Phone",
     "info_location": "Location",
     "info_loc_val": "Tunis, Tunisia",
     "info_hours": "Business Hours",
-    "info_hours_val": "Mon - Fri: 9:00 AM - 6:00 PM"
+    "info_hours_val": "Mon - Fri: 9:00 AM - 6:00 PM",
+    "helper": "We reply by email. If you would rather talk it through, book a 30-minute call instead.",
+    "err_name": "Please enter your name.",
+    "err_email": "That email address does not look right.",
+    "err_phone": "That phone number is too long.",
+    "err_message": "Tell us a little more, so the reply is useful. Ten characters or more."
   },
   "footer": {
     "desc": "Transforming businesses in Tunisia with cutting-edge AI automation solutions.",
@@ -104,10 +109,10 @@
     "language": "Language"
   },
   "home": {
-    "success_title": "Message sent successfully!",
-    "success_desc": "We'll get back to you within 24 hours.",
-    "error_title": "Failed to send message",
-    "error_desc": "Please try again or contact us directly."
+    "success_title": "Message sent",
+    "success_desc": "A reply will come from contact@aiautomatetn.com. WhatsApp is faster if it is urgent.",
+    "error_title": "Your message did not send",
+    "error_desc": "Something went wrong on the way out. Try again, or email contact@aiautomatetn.com directly."
   },
   "seo": {
     "home_title": "aiautomateTN | AI Automation Agency in Tunisia",
@@ -143,8 +148,8 @@
   },
   "notFound": {
     "title": "This page does not exist",
-    "desc": "The link may be out of date, or the page may have moved. The home page has our services and case studies.",
-    "back_home": "Back to home"
+    "desc": "The link may be out of date, or the page may have moved. The home page has the services, the two energy-sector pages and the case studies.",
+    "back_home": "Back to the home page"
   },
   "landings": {
     "solar": {
@@ -252,5 +257,10 @@
   "whatsapp": {
     "message": "Hello, I have a question about your automation work. I came from aiautomatetn.com.",
     "aria": "Chat with us on WhatsApp"
+  },
+  "booking": {
+    "opening": "Opening the calendar",
+    "confirmed_title": "You are booked",
+    "confirmed_desc": "The calendar invite is on its way to your inbox. Bring a real file, or a real set of photos, and we will run it on the call."
   }
 }

@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
+import { z } from "zod";
+import { type InsertContactSubmission } from "@shared/schema";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -27,8 +28,23 @@ interface ContactFormProps {
 export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps) {
   const { t } = useTranslation();
   const { ref, isVisible } = useScrollAnimation();
+
+  // The validation messages are part of the interface, so they are built from
+  // the translations rather than from the shared schema, whose messages are
+  // English only. A French visitor was being shown English errors.
+  const formSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().trim().min(1, t("contact.err_name")),
+        email: z.string().trim().email(t("contact.err_email")),
+        phone: z.string().trim().max(32, t("contact.err_phone")),
+        message: z.string().trim().min(10, t("contact.err_message")),
+      }),
+    [t],
+  );
+
   const form = useForm<InsertContactSubmission>({
-    resolver: zodResolver(insertContactSubmissionSchema),
+    resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -155,6 +171,12 @@ export function ContactForm({ onSubmit, isPending, isSuccess }: ContactFormProps
                     t('contact.submit')
                   )}
                 </Button>
+
+                {/* What happens after you press send, and the alternative for
+                    anyone who would rather talk than write. */}
+                <p className="text-sm text-muted-foreground" data-testid="text-contact-helper">
+                  {t('contact.helper')}
+                </p>
               </form>
             </Form>
           </div>
