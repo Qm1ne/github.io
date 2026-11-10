@@ -2,7 +2,8 @@
   "nav": {
     "free_consultation": "Book a 30-min call",
     "contact_us": "Send a message",
-    "book_consultation": "Book a 30-min call"
+    "book_consultation": "Book a 30-min call",
+    "sectors": "Sectors"
   },
   "hero": {
     "headline_1": "AI automation for businesses in",
@@ -196,10 +197,10 @@
       "proof_link_back": "See how it works for installers",
       "service_name": "STEG photovoltaic application documents",
       "service_type": "Document automation",
-      "breadcrumb": "Solar installers",
       "audience": "Solar installers",
       "faq_5_q": "Can the pack carry our branding?",
-      "faq_5_a": "Yes. The templates take your logo and your layout, so what reaches STEG looks like your firm's paperwork rather than ours."
+      "faq_5_a": "Yes. The templates take your logo and your layout, so what reaches STEG looks like your firm's paperwork rather than ours.",
+      "short_name": "Solar installers"
     },
     "auditors": {
       "hero_eyebrow": "For building energy auditors",
@@ -244,11 +245,11 @@
       "proof_link_back": "See how it works for auditors",
       "service_name": "Energy audit report drafting",
       "service_type": "Document automation",
-      "breadcrumb": "Energy auditors",
       "audience": "Building energy auditors",
       "faq_5_q": "Can the report follow our own method?",
       "faq_5_a": "Yes. The template carries your logo, and the section order and the way each component is written follow your own audit methodology rather than a generic one.",
-      "hero_image_alt": "Energy rating scale, from A in green down to G in red."
+      "hero_image_alt": "Energy rating scale, from A in green down to G in red.",
+      "short_name": "Energy auditors"
     }
   },
   "energy": {

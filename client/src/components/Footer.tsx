@@ -65,7 +65,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   data-testid={`link-footer-${landing.campaign}`}
                 >
-                  {t(`${landing.key}.hero_eyebrow`)}
+                  {t(`${landing.key}.short_name`)}
                 </a>
               ))}
               <a

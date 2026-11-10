@@ -303,7 +303,7 @@ export async function prerender(): Promise<PrerenderedPage[]> {
             breadcrumb(
               url,
               `${SITE_URL}${pathForLang("/", lang)}`,
-              t(`${landing.key}.breadcrumb`),
+              t(`${landing.key}.short_name`),
             ),
           ],
         });

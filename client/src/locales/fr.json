@@ -2,7 +2,8 @@
   "nav": {
     "free_consultation": "Réserver 30 min",
     "contact_us": "Écrire un message",
-    "book_consultation": "Réserver 30 min"
+    "book_consultation": "Réserver 30 min",
+    "sectors": "Secteurs"
   },
   "hero": {
     "headline_1": "L'automatisation IA pour les entreprises en",
@@ -196,10 +197,10 @@
       "proof_link_back": "Voir comment ça marche pour les installateurs",
       "service_name": "Dossiers de demande photovoltaïque STEG",
       "service_type": "Automatisation documentaire",
-      "breadcrumb": "Installateurs solaires",
       "audience": "Installateurs solaires",
       "faq_5_q": "Les documents peuvent-ils porter notre identité ?",
-      "faq_5_a": "Oui. Les modèles reprennent votre logo et votre mise en page, pour que ce qui arrive à la STEG ressemble aux documents de votre entreprise plutôt qu'aux nôtres."
+      "faq_5_a": "Oui. Les modèles reprennent votre logo et votre mise en page, pour que ce qui arrive à la STEG ressemble aux documents de votre entreprise plutôt qu'aux nôtres.",
+      "short_name": "Installateurs solaires"
     },
     "auditors": {
       "hero_eyebrow": "Pour les auditeurs énergétiques du bâtiment",
@@ -244,11 +245,11 @@
       "proof_link_back": "Voir comment ça marche pour les auditeurs",
       "service_name": "Rédaction de brouillons d'audit énergétique",
       "service_type": "Automatisation documentaire",
-      "breadcrumb": "Auditeurs énergétiques",
       "audience": "Auditeurs énergétiques du bâtiment",
       "faq_5_q": "Le rapport peut-il suivre notre méthodologie ?",
       "faq_5_a": "Oui. Le modèle reprend votre logo, et l'ordre des sections comme la façon de rédiger chaque composant suivent votre propre méthodologie d'audit plutôt qu'un format générique.",
-      "hero_image_alt": "Échelle de performance énergétique, de A en vert à G en rouge."
+      "hero_image_alt": "Échelle de performance énergétique, de A en vert à G en rouge.",
+      "short_name": "Auditeurs énergétiques"
     }
   },
   "energy": {

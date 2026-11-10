@@ -6,6 +6,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { pathForLang, type Lang } from "@/lib/routing";
+import { landings } from "@/data/landings";
 import { CalendlyLink } from "@/components/CalendlyLink";
 
 export function Navigation() {
@@ -54,6 +55,23 @@ export function Navigation() {
           </a>
 
           <div className="hidden md:flex items-center gap-4">
+            {/* Destinations, so they are links. The bar keeps one button: a
+                third and fourth would compete with the booking CTA rather
+                than add to it. They appear from the large breakpoint, where
+                there is room for them beside the two existing controls. */}
+            <nav className="hidden lg:flex items-center gap-5" aria-label={t('nav.sectors')}>
+              {landings.map((landing) => (
+                <a
+                  key={landing.path}
+                  href={pathForLang(landing.path, currentLang)}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid={`link-nav-${landing.campaign}`}
+                >
+                  {t(`${landing.key}.short_name`)}
+                </a>
+              ))}
+            </nav>
+
             <Button
               asChild
               variant="default"
@@ -102,6 +120,25 @@ export function Navigation() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px]">
               <div className="flex flex-col gap-6 mt-8">
+                {/* The sectors come first in the drawer: on a phone they are
+                    the only place in the navigation these pages appear. */}
+                <nav
+                  className="flex flex-col gap-3 border-b pb-6"
+                  aria-label={t('nav.sectors')}
+                >
+                  {landings.map((landing) => (
+                    <SheetClose asChild key={landing.path}>
+                      <a
+                        href={pathForLang(landing.path, currentLang)}
+                        className="text-base font-medium text-foreground hover:text-primary transition-colors"
+                        data-testid={`link-nav-${landing.campaign}-mobile`}
+                      >
+                        {t(`${landing.key}.short_name`)}
+                      </a>
+                    </SheetClose>
+                  ))}
+                </nav>
+
                 <SheetClose asChild>
                   <Button
                     variant="default"
