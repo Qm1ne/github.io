@@ -42,7 +42,7 @@
     "title": "Resources & Case Studies",
     "subtitle": "Learn from our success stories and explore automation insights",
     "c1_title": "Automating STEG Photovoltaic Document Generation with AI",
-    "c1_desc": "How solar installers stopped assembling STEG photovoltaic paperwork by hand, with an n8n workflow that builds it from the site survey data.",
+    "c1_desc": "How solar installers stopped assembling STEG photovoltaic paperwork by hand, with an n8n workflow that builds it from the client data they already hold.",
     "c1_type": "Case Study",
     "c2_title": "CRM Integration Success Story",
     "c2_desc": "How a Tunis e-commerce team brought their customer data into HubSpot and automated lead routing, so enquiries reach the right rep straight away.",
@@ -58,7 +58,7 @@
   "articles": {
     "steg-document-generator": {
       "title": "Automating STEG Photovoltaic Document Generation with AI",
-      "content": "## The Challenge\n\nSolar installers in Tunisia face significant administrative bottlenecks when processing applications for photovoltaic installations. Generating the required STEG (Société Tunisienne de l'Electricité et du Gaz) documents manually is time-consuming, prone to human error, and slows down the entire installation pipeline.\n\n## Our Solution: AI Automation Tunisia\n\nAs a premier **AI agency Tunisia**, we implemented a custom solution using **n8n automation Tunisia** to streamline this process. We built an automated workflow that:\n\n1. Captures customer data from the installer's website via an **AI chatbot Tunisia**.\n2. Automatically parses technical specifications and site survey data using **artificial intelligence Tunisia**.\n3. Generates perfectly formatted STEG-compliant PDF documents instantly.\n4. Syncs all records seamlessly into the company's database through our custom **CRM integration Tunisia**.\n\n## The Results\n\n- Paperwork that can take up to four hours per file is assembled in minutes.\n- Every file is checked by a person before it is submitted, because a STEG application is a government document.\n\nThis is just one example of how **business process automation Tunisia** and **digital transformation Tunisia** can revolutionize operations for local SMEs."
+      "content": "## The Challenge\n\nSolar installers in Tunisia face significant administrative bottlenecks when processing applications for photovoltaic installations. Generating the required STEG (Société Tunisienne de l'Electricité et du Gaz) documents manually is time-consuming, prone to human error, and slows down the entire installation pipeline.\n\n## Our Solution: AI Automation Tunisia\n\nAs a premier **AI agency Tunisia**, we implemented a custom solution using **n8n automation Tunisia** to streamline this process. We built an automated workflow that:\n\n1. Captures customer data from the installer's website via an **AI chatbot Tunisia**.\n2. Automatically parses the client and installation data using **artificial intelligence Tunisia**.\n3. Generates perfectly formatted STEG-compliant PDF documents instantly.\n4. Syncs all records seamlessly into the company's database through our custom **CRM integration Tunisia**.\n\n## The Results\n\n- Paperwork that can take up to four hours per file is assembled in minutes.\n- Every file is checked by a person before it is submitted, because a STEG application is a government document.\n\nThis is just one example of how **business process automation Tunisia** and **digital transformation Tunisia** can revolutionize operations for local SMEs."
     },
     "crm-integration": {
       "title": "CRM Integration Success Story",
@@ -120,7 +120,7 @@
     "articles": {
       "steg-document-generator": {
         "title": "Automating STEG photovoltaic documents | aiautomateTN",
-        "desc": "How an n8n workflow builds STEG photovoltaic paperwork from site survey data, cutting the admin time on each solar installation in Tunisia."
+        "desc": "How an n8n workflow builds STEG photovoltaic paperwork from client data, cutting the admin time on each solar installation in Tunisia."
       },
       "crm-integration": {
         "title": "HubSpot CRM integration case study | aiautomateTN",
@@ -138,7 +138,7 @@
     "landings": {
       "solar": {
         "title": "STEG photovoltaic paperwork, automated | aiautomateTN",
-        "desc": "Turn PV site survey data into a ready-to-submit STEG application pack in minutes instead of four hours. Every file is checked by a person before submission."
+        "desc": "Turn the client data you already hold into a ready-to-submit STEG pack in minutes instead of four hours. Every file is checked by a person before submission."
       },
       "auditors": {
         "title": "Draft energy audit reports from site photos | aiautomateTN",
@@ -155,49 +155,51 @@
     "solar": {
       "hero_eyebrow": "For solar installers in Tunisia",
       "hero_title": "Four hours of STEG paperwork, assembled in about three minutes",
-      "hero_subtext": "The site survey data you already collect goes in. A complete photovoltaic application pack comes out, in the format STEG expects, for you to read and submit.",
+      "hero_subtext": "The client data you already hold goes in. A complete photovoltaic application pack comes out, in the format STEG expects, for you to read and submit.",
       "hero_cta": "Book a 30-minute walkthrough",
       "hero_note": "Half an hour, and nothing to install beforehand.",
       "problem_title": "What the paperwork costs you now",
-      "problem_body": "A photovoltaic application is the same information written out many times over: the client, the site, the panel and inverter models, the sizing figures, the references that tie the drawings together. The survey is the easy part. Turning it into a complete file is where the afternoon goes.",
-      "problem_1": "Up to four hours per file, most of it retyping numbers someone already wrote down on site.",
+      "problem_body": "A photovoltaic application is the same information written out many times over: the client, the site, the panel and inverter models, the sizing figures, the references that tie the drawings together. Gathering it is the easy part. Turning it into a complete file is where the afternoon goes.",
+      "problem_1": "Up to four hours per file, most of it retyping details you already hold on the client.",
       "problem_2": "One figure copied across wrongly travels into every document that references it.",
       "problem_3": "The file waits for an afternoon that nobody in the office has, so the installation date moves.",
       "steps_title": "How it works",
       "steps_subtitle": "Three steps, and the only one that needs your judgement is the last.",
-      "steps_1_title": "Send the survey data",
-      "steps_1_body": "Client, location, panel and inverter models, the sizing figures. The same information that comes back from a site visit, entered once.",
+      "steps_1_title": "Send the client data",
+      "steps_1_body": "Client, location, panel and inverter models, the sizing figures. The information you already hold on the client and the installation, entered once.",
       "steps_2_title": "The workflow writes the pack",
-      "steps_2_body": "It checks the figures, runs the calculations and writes every document from them in the format STEG expects. One run covers a pack of around ten documents.",
+      "steps_2_body": "It checks the figures, runs the calculations and writes every document from them in the format STEG expects. The templates carry your logo and your layout. One run covers a pack of around ten documents.",
       "steps_3_title": "You check it and submit",
-      "steps_3_body": "The pack comes back ready to read. Check it against the site you visited, sign it, and file it with STEG yourself.",
+      "steps_3_body": "The pack comes back ready to read. Check it against the client file, sign it, and file it with STEG yourself.",
       "verified_title": "A person signs it, not a model",
       "verified_body": "What comes out is a draft. A photovoltaic application is a government document, and a government document gets read by somebody who knows the site before it is submitted. The workflow does the typing and the arithmetic. What gets filed stays your responsibility.",
       "proof_title": "Where this came from",
       "proof_label": "Case study",
-      "proof_body": "Built for installers who were assembling application packs by hand from survey sheets. The tool is public, so you can generate a file yourself before you ever speak to us.",
+      "proof_body": "Built for installers who were assembling application packs by hand from client files. The tool is public, so you can generate a file yourself before you ever speak to us.",
       "proof_metric": "Up to four hours per file, down to minutes",
       "proof_metric_note": "About three minutes per run, measured across a pack of around ten documents. Your reading and checking time is on top of that.",
       "proof_link": "Read the case study",
       "tool_cta": "See the tool",
       "faq_title": "Questions installers ask first",
       "faq_1_q": "What does it cost, and how soon does it run?",
-      "faq_1_a": "We quote per build after a call. The price follows how many documents your pack contains and how your survey data arrives today: a form, a spreadsheet or paper. You get the figure in writing after the call.",
+      "faq_1_a": "It is a subscription rather than a quote per project: quarterly or yearly, priced on the volume you put through it. We work out which band fits on the call, and you get the figure in writing afterwards.",
       "faq_2_q": "Where does our client data go?",
       "faq_3_q": "Who checks the file before it reaches STEG?",
-      "faq_2_a": "Survey data and client details pass through the workflow and the language model that writes the documents. Where it is hosted is part of the build: your own server and storage, or ours. Bring whatever your client contracts require to the call and we build to that.",
+      "faq_2_a": "Client data and installation details pass through the workflow and the language model that writes the documents. Where it is hosted is part of the build: your own server and storage, or ours. Bring whatever your client contracts require to the call and we build to that.",
       "faq_3_a": "You do. Nothing is submitted automatically and the workflow has no route to STEG. It produces the pack. Someone in your office reads it and files it.",
       "faq_4_q": "What if STEG sends the file back?",
-      "faq_4_a": "Correct the source figure and run it again, which takes minutes rather than another afternoon. If the rejection is about a changed requirement rather than your data, that is a template update on our side and the next run picks it up.",
+      "faq_4_a": "Correct the source data and run it again, which takes minutes rather than another afternoon. If the file was rejected because of something the generator got wrong, we refund in full what that document cost you. If the rejection is about a requirement that changed rather than your data, that is a template update on our side and the next run picks it up.",
       "final_title": "Bring a file you are working on now",
-      "final_body": "Half an hour, your own survey data, and you see what comes out the other end.",
+      "final_body": "Half an hour, your own client data, and you see what comes out the other end.",
       "final_cta": "Book a 30-minute walkthrough",
       "final_whatsapp": "Ask on WhatsApp",
       "proof_link_back": "See how it works for installers",
       "service_name": "STEG photovoltaic application documents",
       "service_type": "Document automation",
       "breadcrumb": "Solar installers",
-      "audience": "Solar installers"
+      "audience": "Solar installers",
+      "faq_5_q": "Can the pack carry our branding?",
+      "faq_5_a": "Yes. The templates take your logo and your layout, so what reaches STEG looks like your firm's paperwork rather than ours."
     },
     "auditors": {
       "hero_eyebrow": "For building energy auditors",
@@ -215,7 +217,7 @@
       "steps_1_title": "Drop in the photo batch",
       "steps_1_body": "The whole set from the visit, in whatever order the camera left them. Grouping them by component is the pipeline's first job, not yours.",
       "steps_2_title": "Each component gets its own agent",
-      "steps_2_body": "A vision agent per category reads the photos assigned to it, judges materials, visible condition and thermal performance, then writes that section with its recommendations in priority order. Thirteen categories, covered end to end.",
+      "steps_2_body": "A vision agent per category reads the photos assigned to it, judges materials, visible condition and thermal performance, then writes that section with its recommendations in priority order. The template follows your own methodology and carries your logo. Thirteen categories, covered end to end.",
       "steps_3_title": "You review and finish it",
       "steps_3_body": "The draft comes back in the shape a DPE-style report needs. Correct what the photos could not show, add what only the visit told you, and sign it.",
       "verified_title": "A draft for an auditor, not a certificate",
@@ -228,7 +230,7 @@
       "proof_link": "Read the case study",
       "faq_title": "Questions auditors ask first",
       "faq_1_q": "What does it cost, and how soon does it run?",
-      "faq_1_a": "We quote per build after a call. The price follows how many component categories you need and how many photos a typical visit produces. You get the figure in writing after the call.",
+      "faq_1_a": "It is a subscription rather than a quote per project: quarterly or yearly, priced on the volume of buildings you put through it. We work out which band fits on the call, and you get the figure in writing afterwards.",
       "faq_2_q": "Where do the site photos go?",
       "faq_2_a": "The photos are sent to the vision model that reads them, and the write-up comes back through the workflow. Where everything is hosted is part of the build: your own storage, or ours. Tell us what your client agreements require and we build to that.",
       "faq_3_q": "Who checks the report before the client sees it?",
@@ -243,7 +245,9 @@
       "service_name": "Energy audit report drafting",
       "service_type": "Document automation",
       "breadcrumb": "Energy auditors",
-      "audience": "Building energy auditors"
+      "audience": "Building energy auditors",
+      "faq_5_q": "Can the report follow our own method?",
+      "faq_5_a": "Yes. The template carries your logo, and the section order and the way each component is written follow your own audit methodology rather than a generic one."
     }
   },
   "energy": {
@@ -251,7 +255,7 @@
     "title": "Two workflows built for energy paperwork",
     "subtitle": "Everything else we do is further down this page. These two exist for specific documents, and each has a real build behind it.",
     "c1_title": "Solar installers",
-    "c1_desc": "STEG photovoltaic application packs, assembled from your site survey data in minutes instead of up to four hours.",
+    "c1_desc": "STEG photovoltaic application packs, assembled from the client data you already hold, in minutes instead of up to four hours.",
     "c1_cta": "For solar installers",
     "c2_title": "Energy auditors",
     "c2_desc": "Site photos turned into a structured draft report across thirteen building components, ready for you to review.",
