@@ -3,56 +3,98 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aiautomatetn.com/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/" />
   </url>
   <url>
+    <loc>https://aiautomatetn.com/solar-installers</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/solar-installers" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/installateurs-solaires" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/solar-installers" />
+  </url>
+  <url>
+    <loc>https://aiautomatetn.com/energy-auditors</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/energy-auditors" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/auditeurs-energetiques" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/energy-auditors" />
+  </url>
+  <url>
     <loc>https://aiautomatetn.com/article/steg-document-generator</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/article/steg-document-generator" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/article/steg-document-generator" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/article/steg-document-generator" />
   </url>
   <url>
+    <loc>https://aiautomatetn.com/article/energy-audit-draft-reports</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/article/energy-audit-draft-reports" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/article/energy-audit-draft-reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/article/energy-audit-draft-reports" />
+  </url>
+  <url>
     <loc>https://aiautomatetn.com/article/crm-integration</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/article/crm-integration" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/article/crm-integration" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/article/crm-integration" />
   </url>
   <url>
     <loc>https://aiautomatetn.com/article/scaling-lead-generation</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/article/scaling-lead-generation" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/article/scaling-lead-generation" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/article/scaling-lead-generation" />
   </url>
   <url>
     <loc>https://aiautomatetn.com/fr/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/" />
   </url>
   <url>
+    <loc>https://aiautomatetn.com/fr/installateurs-solaires</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/solar-installers" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/installateurs-solaires" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/solar-installers" />
+  </url>
+  <url>
+    <loc>https://aiautomatetn.com/fr/auditeurs-energetiques</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/energy-auditors" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/auditeurs-energetiques" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/energy-auditors" />
+  </url>
+  <url>
     <loc>https://aiautomatetn.com/fr/article/steg-document-generator</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/article/steg-document-generator" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/article/steg-document-generator" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/article/steg-document-generator" />
   </url>
   <url>
+    <loc>https://aiautomatetn.com/fr/article/energy-audit-draft-reports</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/article/energy-audit-draft-reports" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/article/energy-audit-draft-reports" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/article/energy-audit-draft-reports" />
+  </url>
+  <url>
     <loc>https://aiautomatetn.com/fr/article/crm-integration</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/article/crm-integration" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/article/crm-integration" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/article/crm-integration" />
   </url>
   <url>
     <loc>https://aiautomatetn.com/fr/article/scaling-lead-generation</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://aiautomatetn.com/article/scaling-lead-generation" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://aiautomatetn.com/fr/article/scaling-lead-generation" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aiautomatetn.com/article/scaling-lead-generation" />
