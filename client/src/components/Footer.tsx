@@ -6,6 +6,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useTranslation } from "react-i18next";
 import { pathForLang, type Lang } from "@/lib/routing";
 import { landings } from "@/data/landings";
+import { CalendlyLink } from "@/components/CalendlyLink";
 
 export function Footer() {
   const { t, i18n } = useTranslation();
@@ -74,15 +75,12 @@ export function Footer() {
               >
                 {t('footer.contact')}
               </a>
-              <a
-                href="https://calendly.com/aiautomatetn/30min"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalendlyLink
+                location="footer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-footer-booking"
               >
                 {t('nav.book_consultation')}
-              </a>
+              </CalendlyLink>
             </nav>
           </div>
 

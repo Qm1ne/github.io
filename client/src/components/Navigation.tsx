@@ -6,6 +6,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { pathForLang, type Lang } from "@/lib/routing";
+import { CalendlyLink } from "@/components/CalendlyLink";
 
 export function Navigation() {
   const { t, i18n } = useTranslation();
@@ -59,13 +60,9 @@ export function Navigation() {
               size="default"
               data-testid="button-book-consultation"
             >
-              <a
-                href="https://calendly.com/aiautomatetn/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <CalendlyLink location="nav">
                 {t('nav.free_consultation')}
-              </a>
+              </CalendlyLink>
             </Button>
             <Button
               variant="outline"
@@ -113,13 +110,9 @@ export function Navigation() {
                     asChild
                     data-testid="button-book-consultation-mobile"
                   >
-                    <a
-                      href="https://calendly.com/aiautomatetn/30min"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <CalendlyLink location="nav-mobile">
                       {t('nav.book_consultation')}
-                    </a>
+                    </CalendlyLink>
                   </Button>
                 </SheetClose>
                 <Button
