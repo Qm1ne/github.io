@@ -11,26 +11,25 @@ export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { ref, isVisible } = useScrollAnimation();
 
-  const testimonials = [
-    {
-      quote: t('testimonials.t1_quote'),
-      author: t('testimonials.t1_author'),
-      position: t('testimonials.t1_pos'),
-      initials: "AH",
-    },
-    {
-      quote: t('testimonials.t2_quote'),
-      author: t('testimonials.t2_author'),
-      position: t('testimonials.t2_pos'),
-      initials: "LM",
-    },
-    {
-      quote: t('testimonials.t3_quote'),
-      author: t('testimonials.t3_author'),
-      position: t('testimonials.t3_pos'),
-      initials: "RO",
-    },
-  ];
+  // Initials come from the translated name, so an attribution that differs
+  // between languages cannot end up with the wrong letters on the avatar.
+  const initialsOf = (author: string) =>
+    author
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((word) => word[0]?.toUpperCase() ?? "")
+      .join("");
+
+  const testimonials = [1, 2].map((n) => {
+    const author = t(`testimonials.t${n}_author`);
+    return {
+      quote: t(`testimonials.t${n}_quote`),
+      author,
+      position: t(`testimonials.t${n}_pos`),
+      initials: initialsOf(author),
+    };
+  });
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
