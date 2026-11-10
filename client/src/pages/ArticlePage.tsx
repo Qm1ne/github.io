@@ -1,14 +1,18 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useRoute } from "wouter";
+import { Link, useRoute } from "wouter";
+import { ArrowRight } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { articles } from "@/data/articles";
+import { landingFor } from "@/data/landings";
+import { slugForLang, type Lang } from "@/lib/routing";
 import ReactMarkdown from "react-markdown";
 
 export default function ArticlePage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [match, params] = useRoute("/article/:slug");
+  const lang: Lang = i18n.language === "fr" ? "fr" : "en";
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,6 +43,7 @@ export default function ArticlePage() {
   // Assuming we added an "articles" object in en.json and fr.json
   const articleTitle = t(`articles.${params.slug}.title`);
   const articleContent = t(`articles.${params.slug}.content`);
+  const landing = articleMeta.landing ? landingFor(articleMeta.landing) : undefined;
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background selection:bg-primary/20 selection:text-primary">
@@ -67,6 +72,24 @@ export default function ArticlePage() {
           <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground leading-relaxed">
             <ReactMarkdown>{articleContent}</ReactMarkdown>
           </div>
+
+          {/* A case study is the proof for a landing page, so each one links
+              back to the page it is proof for. */}
+          {landing && (
+            <aside className="mt-12 rounded-lg border bg-muted/30 p-6">
+              <p className="text-muted-foreground">
+                {t(`${landing.key}.hero_eyebrow`)}
+              </p>
+              <Link
+                href={slugForLang(landing.path, lang)}
+                className="mt-2 inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline"
+                data-testid="link-article-landing"
+              >
+                {t(`${landing.key}.proof_link_back`)}
+                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              </Link>
+            </aside>
+          )}
         </article>
       </main>
 

@@ -50,7 +50,10 @@
     "c3_title": "Scaling Lead Generation with n8n",
     "c3_desc": "A walkthrough of an n8n workflow that finds B2B prospects, drafts personalised outreach and hands replies over to the sales team.",
     "c3_type": "Tutorial",
-    "read_more": "Read More"
+    "read_more": "Read More",
+    "c4_title": "Draft energy audit reports from site photos",
+    "c4_desc": "How a multi-agent vision pipeline turns a batch of site photos into a structured draft write-up across thirteen building components, for the auditor to review.",
+    "c4_type": "Case Study"
   },
   "articles": {
     "steg-document-generator": {
@@ -64,6 +67,10 @@
     "scaling-lead-generation": {
       "title": "Scaling Lead Generation with n8n",
       "content": "## The New Era of AI Lead Generation Tunisia\n\nTraditional outbound marketing is becoming increasingly inefficient. To stay ahead, modern businesses are turning to **AI marketing Tunisia** and **automated workflows Tunisia**.\n\n## Building the Engine\n\nIn this tutorial case study, we explore how our **AI consulting Tunisia** team built an automated lead generation machine using **n8n automation Tunisia**.\n\n1. **Data Scraping & Enrichment:** We set up automated web scraping tools to identify target B2B prospects across Tunisia.\n2. **AI Personalization:** Using **generative AI Tunisia**, the system drafts hyper-personalized outreach emails based on the prospect's industry and recent company news.\n3. **Omnichannel Outreach:** The workflow orchestrates touchpoints across email and LinkedIn, tracking opens and replies.\n4. **Seamless Handoff:** Once a prospect replies, an **AI chatbot Tunisia** takes over preliminary qualifying before handing them off to a human closer via a direct **CRM integration Tunisia**.\n\n## Why It Matters\n\nThis **custom automation Tunisia** system keeps the prospect list and the first draft of each message moving without manual research, so the sales team spends its time on replies rather than on list building. If you're looking to implement similar **AI solutions Tunisia**, contact our **AI agency Tunisia** today."
+    },
+    "energy-audit-draft-reports": {
+      "title": "Draft energy audit reports from site photos",
+      "content": "## The problem\n\nA building energy audit starts with a site visit and a few hundred photographs. The visit takes a couple of hours. Writing it up takes the rest of the week, because every component needs its own technical paragraph: what it is made of, the condition it is in, how it performs thermally, and what to recommend first.\n\n## How the pipeline works\n\nThe workflow runs in n8n and reads the photographs with GPT-4o's vision model. A batch from one visit goes in unsorted.\n\n1. The photos are grouped by building component, so nobody has to rename files or sort them into folders first.\n2. Each of thirteen component categories has its own agent: roofing, facades, windows, plumbing, heating and the rest. An agent only ever sees the photos for its own category.\n3. Each agent judges materials, visible condition and thermal performance, then writes its section with recommendations in priority order.\n4. The sections are assembled into one structured draft, in the shape a DPE-style report needs.\n\n## What it produces\n\nA base report for the auditor to edit, not a finished audit. Drafting that took several hours by hand comes back in about twenty minutes per run. Review and correction time is on top of that, and how long it takes depends on the building and how much changes.\n\nBecause each category is its own agent, adding a fourteenth component is a configuration change rather than a rebuild.\n\n## The limits\n\nAn agent writes about what is visible in the photographs. A component nobody photographed comes back as a thin section for the auditor to fill in from their own notes. An energy audit is a regulated document, so the judgement, the corrections and the signature stay with the auditor."
     }
   },
   "contact": {
@@ -117,6 +124,10 @@
       "scaling-lead-generation": {
         "title": "Automated B2B lead generation with n8n | aiautomateTN",
         "desc": "A walkthrough of an n8n workflow that finds B2B prospects, drafts personalised outreach and passes replies to the sales team."
+      },
+      "energy-audit-draft-reports": {
+        "title": "Energy audit drafts from site photos | aiautomateTN",
+        "desc": "How a multi-agent vision pipeline in n8n reads a batch of site photos and drafts the technical write-up for thirteen building components in about 20 minutes."
       }
     },
     "landings": {
@@ -176,7 +187,8 @@
       "final_title": "Bring a file you are working on now",
       "final_body": "Half an hour, your own survey data, and you see what comes out the other end.",
       "final_cta": "Book a 30-minute walkthrough",
-      "final_whatsapp": "Ask on WhatsApp"
+      "final_whatsapp": "Ask on WhatsApp",
+      "proof_link_back": "See how it works for installers"
     },
     "auditors": {
       "hero_eyebrow": "For building energy auditors",
@@ -217,7 +229,8 @@
       "final_title": "Bring photos from your last visit",
       "final_body": "Half an hour, one real building, and you see the draft it produces.",
       "final_cta": "Book a 30-minute walkthrough",
-      "final_whatsapp": "Ask on WhatsApp"
+      "final_whatsapp": "Ask on WhatsApp",
+      "proof_link_back": "See how it works for auditors"
     }
   },
   "energy": {

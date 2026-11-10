@@ -36,6 +36,17 @@ export function slugsFor(canonical: string): string[] {
   return [canonical, ...localised];
 }
 
+/**
+ * The slug a language serves a route from, without the language prefix.
+ *
+ * This is what in-app links need: the router already prepends the prefix, so a
+ * French page linking to `/installateurs-solaires` lands on
+ * `/fr/installateurs-solaires`, which is the URL that actually exists.
+ */
+export function slugForLang(canonical: string, lang: Lang): string {
+  return PATH_BY_LANG[canonical]?.[lang] ?? canonical;
+}
+
 /** Everything under `/fr` is the French site, anything else is English. */
 export function langFromPath(pathname: string): Lang {
   return /^\/fr(\/|$)/.test(pathname) ? "fr" : DEFAULT_LANG;

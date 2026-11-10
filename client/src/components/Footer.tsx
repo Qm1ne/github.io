@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useTranslation } from "react-i18next";
 import { pathForLang, type Lang } from "@/lib/routing";
+import { landings } from "@/data/landings";
 
 export function Footer() {
   const { t, i18n } = useTranslation();
@@ -54,6 +55,18 @@ export function Footer() {
               >
                 {t('footer.services')}
               </a>
+              {/* Absolute paths, because the footer is on the article pages too
+                  and each language serves these from its own slug. */}
+              {landings.map((landing) => (
+                <a
+                  key={landing.path}
+                  href={pathForLang(landing.path, currentLang)}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid={`link-footer-${landing.campaign}`}
+                >
+                  {t(`${landing.key}.hero_eyebrow`)}
+                </a>
+              ))}
               <a
                 href={`${home}#contact`}
                 className="text-muted-foreground hover:text-foreground transition-colors"

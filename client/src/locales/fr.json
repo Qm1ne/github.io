@@ -50,7 +50,10 @@
     "c3_title": "Mise à l'Échelle de la Génération de Leads avec n8n",
     "c3_desc": "Le détail d'un workflow n8n qui identifie des prospects B2B, rédige des messages personnalisés et transmet les réponses à l'équipe commerciale.",
     "c3_type": "Tutoriel",
-    "read_more": "Lire la suite"
+    "read_more": "Lire la suite",
+    "c4_title": "Des brouillons de rapports d'audit depuis les photos de visite",
+    "c4_desc": "Comment un pipeline de vision multi-agents transforme un lot de photos de visite en brouillon structuré sur treize composants du bâtiment, à relire par l'auditeur.",
+    "c4_type": "Étude de cas"
   },
   "articles": {
     "steg-document-generator": {
@@ -64,6 +67,10 @@
     "scaling-lead-generation": {
       "title": "Mise à l'Échelle de la Génération de Leads avec n8n",
       "content": "## La Nouvelle Ère de la Génération de Leads Tunisie\n\nLe marketing traditionnel devient de moins en moins efficace. Pour rester compétitives, les entreprises modernes se tournent vers l'**automatisation marketing Tunisie**.\n\n## Construire le Moteur\n\nDans cette étude de cas, nous explorons comment notre équipe de **consulting IA Tunisie** a construit une machine automatisée de génération de leads en utilisant **n8n automatisation Tunisie**.\n\n1. **Scraping et Enrichissement de Données :** Nous avons configuré des outils pour identifier les prospects B2B ciblés partout en Tunisie.\n2. **Personnalisation par l'IA :** En utilisant l'**IA générative Tunisie**, le système rédige des emails ultra-personnalisés en fonction du secteur du prospect.\n3. **Prospection Omnicanale :** Le workflow orchestre les contacts par email et LinkedIn, en suivant les ouvertures et réponses.\n4. **Prise de Relais :** Dès qu'un prospect répond, un **chatbot IA Tunisie** prend le relais pour une qualification préliminaire avant de le transférer à un commercial via une **intégration CRM Tunisie** directe.\n\n## Pourquoi C'est Important\n\nCe système d'**automatisation sur mesure Tunisie** maintient la liste de prospects et le premier brouillon de chaque message sans recherche manuelle, pour que l'équipe commerciale passe son temps sur les réponses plutôt que sur la constitution de listes. Si vous cherchez des **solutions IA Tunisie** similaires, contactez notre **agence IA Tunisie**."
+    },
+    "energy-audit-draft-reports": {
+      "title": "Des brouillons de rapports d'audit depuis les photos de visite",
+      "content": "## Le problème\n\nUn audit énergétique de bâtiment commence par une visite et quelques centaines de photographies. La visite prend deux heures. La rédaction prend le reste de la semaine, parce que chaque composant demande son paragraphe technique : les matériaux, l'état constaté, la performance thermique et ce qu'il faut recommander en premier.\n\n## Comment fonctionne le pipeline\n\nLe workflow tourne sur n8n et analyse les photographies avec le modèle de vision GPT-4o. Le lot d'une visite entre sans tri préalable.\n\n1. Les photos sont regroupées par composant, sans avoir à renommer les fichiers ni à les ranger dans des dossiers au préalable.\n2. Chacune des treize catégories de composants a son propre agent : toiture, façades, menuiseries, plomberie, chauffage et les autres. Un agent ne voit que les photos de sa catégorie.\n3. Chaque agent juge les matériaux, l'état visible et la performance thermique, puis rédige sa section avec des recommandations classées par priorité.\n4. Les sections sont assemblées en un brouillon structuré, dans la forme qu'attend un rapport de type DPE.\n\n## Ce que cela produit\n\nUn rapport de base que l'auditeur corrige, pas un audit finalisé. Une rédaction qui demandait plusieurs heures à la main revient en vingt minutes environ par exécution. Le temps de relecture et de correction s'y ajoute, et sa durée dépend du bâtiment et de l'ampleur des modifications.\n\nComme chaque catégorie est un agent distinct, ajouter un quatorzième composant relève d'un réglage et non d'une refonte.\n\n## Les limites\n\nUn agent écrit sur ce qui est visible dans les photographies. Un composant que personne n'a photographié revient sous forme de section incomplète, que l'auditeur complète avec ses propres notes. Un audit énergétique est un document réglementé : le jugement, les corrections et la signature restent ceux de l'auditeur."
     }
   },
   "contact": {
@@ -117,6 +124,10 @@
       "scaling-lead-generation": {
         "title": "Génération de leads B2B avec n8n | aiautomateTN",
         "desc": "Le détail d'un workflow n8n qui identifie des prospects B2B, rédige des messages personnalisés et transmet les réponses à l'équipe commerciale."
+      },
+      "energy-audit-draft-reports": {
+        "title": "Brouillons d'audit depuis les photos de visite | aiautomateTN",
+        "desc": "Comment un pipeline de vision multi-agents sur n8n analyse un lot de photos de visite et rédige le texte technique de treize composants en vingt minutes environ."
       }
     },
     "landings": {
@@ -176,7 +187,8 @@
       "final_title": "Apportez un dossier en cours",
       "final_body": "Une demi-heure, vos propres données de visite, et vous voyez ce qui sort à l'autre bout.",
       "final_cta": "Réserver 30 minutes de démonstration",
-      "final_whatsapp": "Poser une question sur WhatsApp"
+      "final_whatsapp": "Poser une question sur WhatsApp",
+      "proof_link_back": "Voir comment ça marche pour les installateurs"
     },
     "auditors": {
       "hero_eyebrow": "Pour les auditeurs énergétiques du bâtiment",
@@ -217,7 +229,8 @@
       "final_title": "Apportez les photos de votre dernière visite",
       "final_body": "Une demi-heure, un vrai bâtiment, et vous voyez le brouillon qu'il produit.",
       "final_cta": "Réserver 30 minutes de démonstration",
-      "final_whatsapp": "Poser une question sur WhatsApp"
+      "final_whatsapp": "Poser une question sur WhatsApp",
+      "proof_link_back": "Voir comment ça marche pour les auditeurs"
     }
   },
   "energy": {
