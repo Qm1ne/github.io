@@ -18,23 +18,23 @@ export interface LandingMetadata {
   articleSlug: string;
   /** `utm_campaign` for every CTA on this page. */
   campaign: string;
-  /** The hero image. Preloaded, because it is the LCP element. */
-  hero: {
-    image: string;
-    width: number;
-    height: number;
-    /**
-     * `cover` fills the section behind the text, which suits a photograph.
-     * `side` puts the image beside the text, which is the only honest way to
-     * show a diagram: text over a chart is unreadable, and cropping a chart
-     * cuts the labels off it.
-     */
-    layout: "cover" | "side";
-    /** Only for `cover`: the wash that keeps the headline readable over it. */
-    scrim?: string;
-    /** Only for `side`: translation key for its alt text, since it is shown. */
-    altKey?: string;
-  };
+  /**
+   * What the hero shows beside or behind its text.
+   *
+   * `photo` fills the section behind the text under a scrim, and is preloaded
+   * because it is then the LCP element. `scale` draws the A-to-G rating scale
+   * next to the text: it is seven bars and seven letters, so it is drawn
+   * rather than fetched, and nothing needs preloading.
+   */
+  hero:
+    | {
+        kind: "photo";
+        image: string;
+        width: number;
+        height: number;
+        scrim: string;
+      }
+    | { kind: "scale"; titleKey: string };
 }
 
 export const landings: LandingMetadata[] = [
@@ -47,10 +47,10 @@ export const landings: LandingMetadata[] = [
     articleSlug: "steg-document-generator",
     campaign: "solar-installers",
     hero: {
+      kind: "photo",
       image: "/images/hero-solar-installers.webp",
       width: 1600,
       height: 900,
-      layout: "cover",
       scrim:
         "bg-gradient-to-r from-background/95 via-background/91 to-background/86",
     },
@@ -63,11 +63,8 @@ export const landings: LandingMetadata[] = [
     articleSlug: "energy-audit-draft-reports",
     campaign: "energy-auditors",
     hero: {
-      image: "/images/hero-energy-auditors.webp",
-      width: 1200,
-      height: 627,
-      layout: "side",
-      altKey: "landings.auditors.hero_image_alt",
+      kind: "scale",
+      titleKey: "landings.auditors.hero_image_alt",
     },
   },
 ];

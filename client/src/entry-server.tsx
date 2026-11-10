@@ -290,7 +290,9 @@ export async function prerender(): Promise<PrerenderedPage[]> {
           ogType: "website",
           image: DEFAULT_OG,
           alternates,
-          preloadImage: landing.hero.image,
+          // A drawn scale is in the HTML already; there is nothing to fetch.
+          preloadImage:
+            landing.hero.kind === "photo" ? landing.hero.image : undefined,
           graph: [
             organization(),
             website(lang),

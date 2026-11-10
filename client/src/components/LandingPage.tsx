@@ -4,6 +4,7 @@ import { ArrowRight, ExternalLink, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
+import { EnergyRatingScale } from "@/components/EnergyRatingScale";
 import { Footer } from "@/components/Footer";
 import { CalendlyButton } from "@/components/CalendlyButton";
 import { WhatsAppButton, WhatsAppFab } from "@/components/WhatsAppButton";
@@ -27,7 +28,8 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
   const { t } = useTranslation();
   const k = (suffix: string) => `${landing.key}.${suffix}`;
   const campaign = landing.campaign;
-  const aside = landing.hero.layout === "side";
+  const hero = landing.hero;
+  const aside = hero.kind === "scale";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -35,25 +37,25 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
       <main className="flex-1">
         {/* 1. Hero: one pain, one outcome, one call to action. */}
         <section className="relative overflow-hidden border-b bg-muted/30">
-          {/* A photograph sits behind the text under a scrim. A diagram
-              cannot: text over a chart is unreadable and cropping a chart cuts
-              the labels off, so that one is laid out beside the text instead
-              and is a real illustration with real alt text. */}
-          {!aside && (
+          {/* A photograph sits behind the text under a scrim. The rating
+              scale cannot: text over a chart is unreadable, and cropping an
+              A-to-G scale cuts the letters off its ends. It goes beside the
+              text instead. */}
+          {hero.kind === "photo" && (
             <>
               <img
-                src={landing.hero.image}
+                src={hero.image}
                 alt=""
                 aria-hidden="true"
-                width={landing.hero.width}
-                height={landing.hero.height}
+                width={hero.width}
+                height={hero.height}
                 fetchPriority="high"
                 decoding="async"
                 className="pointer-events-none absolute inset-0 h-full w-full object-cover"
               />
               <div
                 aria-hidden="true"
-                className={`absolute inset-0 ${landing.hero.scrim}`}
+                className={`absolute inset-0 ${hero.scrim}`}
               />
             </>
           )}
@@ -65,10 +67,10 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
           >
             <div
               className={
-                aside ? "grid items-center gap-10 lg:grid-cols-2" : undefined
+                aside ? "grid items-center gap-10 md:grid-cols-2" : undefined
               }
             >
-              <div className={aside ? "text-center lg:text-left" : "text-center"}>
+              <div className={aside ? "text-center md:text-left" : "text-center"}>
                 <p className="text-sm font-semibold uppercase tracking-wide text-primary">
                   {t(k("hero_eyebrow"))}
                 </p>
@@ -83,7 +85,7 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                 </p>
                 <div
                   className={`mt-8 flex justify-center ${
-                    aside ? "lg:justify-start" : ""
+                    aside ? "md:justify-start" : ""
                   }`}
                 >
                   <CalendlyButton
@@ -105,15 +107,10 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                 </p>
               </div>
 
-              {aside && (
-                <img
-                  src={landing.hero.image}
-                  alt={t(landing.hero.altKey ?? "")}
-                  width={landing.hero.width}
-                  height={landing.hero.height}
-                  fetchPriority="high"
-                  decoding="async"
-                  className="mx-auto w-full max-w-md lg:max-w-none"
+              {hero.kind === "scale" && (
+                <EnergyRatingScale
+                  title={t(hero.titleKey)}
+                  className="mx-auto w-full max-w-xs md:max-w-sm"
                 />
               )}
             </div>
