@@ -83,8 +83,11 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
                   {t(k("hero_subtext"))}
                 </p>
+                {/* Where a visitor can try the thing themselves, that is the
+                    cheaper first step and it belongs next to the call, not four
+                    sections below it. The call stays the primary button. */}
                 <div
-                  className={`mt-8 flex justify-center ${
+                  className={`mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center ${
                     aside ? "md:justify-start" : ""
                   }`}
                 >
@@ -98,13 +101,61 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                     {t(k("hero_cta"))}
                     <ArrowRight className="h-5 w-5" aria-hidden="true" />
                   </CalendlyButton>
+                  {landing.tool && (
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="lg"
+                      className="w-full sm:w-auto whitespace-normal h-auto py-3 text-base px-6 sm:px-8 gap-2"
+                    >
+                      <a
+                        href={landing.tool}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() =>
+                          trackCtaClick({
+                            location: "hero",
+                            campaign,
+                            destination: "tool",
+                          })
+                        }
+                        data-testid="link-landing-hero-tool"
+                      >
+                        {t(k("hero_tool_cta"))}
+                        <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      </a>
+                    </Button>
+                  )}
                 </div>
                 {/* Darker than the usual muted grey: this one sits over a
                     photograph on one of the two pages, and muted grey does not
                     hold 4.5:1 against it. */}
-                <p className="mt-4 text-sm text-foreground/75">
-                  {t(k("hero_note"))}
-                </p>
+                <div
+                  className={`mt-4 flex flex-wrap items-center justify-center gap-x-1 gap-y-1 ${
+                    aside ? "md:justify-start" : ""
+                  }`}
+                >
+                  <p className="text-sm text-foreground/75">
+                    {t(k("hero_note"))}
+                  </p>
+                  {/* Hidden on phones, where the floating green button is
+                      already permanent and unmissable, and where this line
+                      lands underneath it at the top of the page.
+
+                      Underlined rather than primary-coloured: measured over
+                      the photograph on the solar page, primary falls to
+                      4.3:1 this far right of the scrim. */}
+                  <WhatsAppButton
+                    campaign={campaign}
+                    location="hero"
+                    variant="ghost"
+                    size="sm"
+                    className="hidden h-auto min-h-0 gap-1 px-1 py-0 text-sm text-foreground/75 underline underline-offset-4 sm:inline-flex"
+                    data-testid="link-landing-hero-whatsapp"
+                  >
+                    {t(k("hero_whatsapp"))}
+                  </WhatsAppButton>
+                </div>
               </div>
 
               {hero.kind === "scale" && (
@@ -190,9 +241,28 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                   <p className="mt-2 text-muted-foreground leading-relaxed">
                     {t(k("verified_body"))}
                   </p>
+                  {landing.refundNote && (
+                    <p className="mt-3 font-medium text-foreground">
+                      {t(k("verified_refund"))}
+                    </p>
+                  )}
                 </div>
               </div>
             </Card>
+            {/* The same single action, offered at the point the reader's
+                largest objection has just been answered. */}
+            <div className="mt-8 flex justify-center">
+              <CalendlyButton
+                campaign={campaign}
+                location="mid"
+                size="lg"
+                className="w-full sm:w-auto whitespace-normal h-auto py-3 text-base px-6 sm:px-8 gap-2"
+                data-testid="button-landing-mid-cta"
+              >
+                {t(k("hero_cta"))}
+                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              </CalendlyButton>
+            </div>
           </div>
         </section>
 
@@ -252,7 +322,12 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
             </h2>
             <div className="mt-8 divide-y border-y">
               {range(landing.faqs).map((n) => (
-                <details key={n} className="group py-4" data-testid={`faq-${n}`}>
+                <details
+                  key={n}
+                  open={n === 1}
+                  className="group py-4"
+                  data-testid={`faq-${n}`}
+                >
                   <summary className="cursor-pointer list-none font-semibold text-foreground [&::-webkit-details-marker]:hidden">
                     <span className="flex items-start justify-between gap-4">
                       {t(k(`faq_${n}_q`))}

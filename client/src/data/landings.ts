@@ -12,8 +12,18 @@ export interface LandingMetadata {
   steps: number;
   /** How many `faq_N_*` entries the locale files define. */
   faqs: number;
-  /** A public tool to link from the proof section, where one exists. */
+  /** A public tool to link from the hero and the proof section, where one exists. */
   tool?: string;
+  /**
+   * Whether this page may promise money back on a rejected document.
+   *
+   * Only the STEG pack can: the promise is on the cost of a document that was
+   * refused because the generator got it wrong, and an audit draft is never
+   * filed with anybody. So the reassurance under the verification card is
+   * written for one page and absent from the other, rather than softened into
+   * something true of both.
+   */
+  refundNote?: boolean;
   /** The case study this page's proof section links to. */
   articleSlug: string;
   /** `utm_campaign` for every CTA on this page. */
@@ -44,6 +54,7 @@ export const landings: LandingMetadata[] = [
     steps: 3,
     faqs: 5,
     tool: "https://pv.aiautomatetn.com",
+    refundNote: true,
     articleSlug: "steg-document-generator",
     campaign: "solar-installers",
     hero: {

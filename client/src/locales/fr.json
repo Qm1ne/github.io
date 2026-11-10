@@ -182,7 +182,7 @@
       "proof_link": "Lire l'étude de cas",
       "tool_cta": "Voir l'outil",
       "faq_title": "Les questions que les installateurs posent en premier",
-      "faq_1_q": "Combien ça coûte, et sous quel délai ?",
+      "faq_1_q": "Combien ça coûte ?",
       "faq_1_a": "C'est un abonnement, et non un devis par projet : trimestriel ou annuel, tarifé selon le volume que vous y faites passer. Nous déterminons la tranche qui vous correspond pendant l'appel, et vous recevez le montant par écrit ensuite.",
       "faq_2_q": "Où vont les données de nos clients ?",
       "faq_2_a": "Les données client et les détails de l'installation passent par le workflow et par le modèle de langage qui rédige les documents. L'hébergement fait partie du projet : votre propre serveur et votre stockage, ou les nôtres. Dites-nous ce qu'exigent vos contrats clients et nous construisons en conséquence.",
@@ -200,7 +200,10 @@
       "audience": "Installateurs solaires",
       "faq_5_q": "Les documents peuvent-ils porter notre identité ?",
       "faq_5_a": "Oui. Les modèles reprennent votre logo et votre mise en page, pour que ce qui arrive à la STEG ressemble aux documents de votre entreprise plutôt qu'aux nôtres.",
-      "short_name": "Installateurs solaires"
+      "short_name": "Installateurs solaires",
+      "hero_tool_cta": "Essayer sur un dossier",
+      "hero_whatsapp": "Ou posez votre question sur WhatsApp",
+      "verified_refund": "Si un refus vient d'une erreur du générateur, nous vous remboursons ce que ce document vous a coûté."
     },
     "auditors": {
       "hero_eyebrow": "Pour les auditeurs énergétiques du bâtiment",
@@ -230,7 +233,7 @@
       "proof_metric_note": "Environ vingt minutes par exécution pour le système lui-même. Votre relecture et vos corrections s'y ajoutent, et leur durée dépend du bâtiment et de l'ampleur des modifications.",
       "proof_link": "Lire l'étude de cas",
       "faq_title": "Les questions que les auditeurs posent en premier",
-      "faq_1_q": "Combien ça coûte, et sous quel délai ?",
+      "faq_1_q": "Combien ça coûte ?",
       "faq_1_a": "C'est un abonnement, et non un devis par projet : trimestriel ou annuel, tarifé selon le volume de bâtiments que vous y faites passer. Nous déterminons la tranche qui vous correspond pendant l'appel, et vous recevez le montant par écrit ensuite.",
       "faq_2_q": "Où vont les photos des sites ?",
       "faq_2_a": "Les photos sont transmises au modèle de vision qui les analyse, et le texte revient par le workflow. L'hébergement fait partie du projet : votre propre stockage, ou le nôtre. Dites-nous ce qu'exigent vos engagements clients et nous construisons en conséquence.",
@@ -249,7 +252,8 @@
       "faq_5_q": "Le rapport peut-il suivre notre méthodologie ?",
       "faq_5_a": "Oui. Le modèle reprend votre logo, et l'ordre des sections comme la façon de rédiger chaque composant suivent votre propre méthodologie d'audit plutôt qu'un format générique.",
       "hero_image_alt": "Échelle de performance énergétique, de A en vert à G en rouge.",
-      "short_name": "Auditeurs énergétiques"
+      "short_name": "Auditeurs énergétiques",
+      "hero_whatsapp": "Ou posez votre question sur WhatsApp"
     }
   },
   "energy": {

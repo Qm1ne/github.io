@@ -182,7 +182,7 @@
       "proof_link": "Read the case study",
       "tool_cta": "See the tool",
       "faq_title": "Questions installers ask first",
-      "faq_1_q": "What does it cost, and how soon does it run?",
+      "faq_1_q": "What does it cost?",
       "faq_1_a": "It is a subscription rather than a quote per project: quarterly or yearly, priced on the volume you put through it. We work out which band fits on the call, and you get the figure in writing afterwards.",
       "faq_2_q": "Where does our client data go?",
       "faq_3_q": "Who checks the file before it reaches STEG?",
@@ -200,7 +200,10 @@
       "audience": "Solar installers",
       "faq_5_q": "Can the pack carry our branding?",
       "faq_5_a": "Yes. The templates take your logo and your layout, so what reaches STEG looks like your firm's paperwork rather than ours.",
-      "short_name": "Solar installers"
+      "short_name": "Solar installers",
+      "hero_tool_cta": "Try it on one file",
+      "hero_whatsapp": "Or ask on WhatsApp",
+      "verified_refund": "If a rejection comes from something the generator got wrong, we refund what that document cost you."
     },
     "auditors": {
       "hero_eyebrow": "For building energy auditors",
@@ -230,7 +233,7 @@
       "proof_metric_note": "About twenty minutes per run for the system itself. Your review and edits are on top, and how long those take depends on the building and how much you change.",
       "proof_link": "Read the case study",
       "faq_title": "Questions auditors ask first",
-      "faq_1_q": "What does it cost, and how soon does it run?",
+      "faq_1_q": "What does it cost?",
       "faq_1_a": "It is a subscription rather than a quote per project: quarterly or yearly, priced on the volume of buildings you put through it. We work out which band fits on the call, and you get the figure in writing afterwards.",
       "faq_2_q": "Where do the site photos go?",
       "faq_2_a": "The photos are sent to the vision model that reads them, and the write-up comes back through the workflow. Where everything is hosted is part of the build: your own storage, or ours. Tell us what your client agreements require and we build to that.",
@@ -249,7 +252,8 @@
       "faq_5_q": "Can the report follow our own method?",
       "faq_5_a": "Yes. The template carries your logo, and the section order and the way each component is written follow your own audit methodology rather than a generic one.",
       "hero_image_alt": "Energy rating scale, from A in green down to G in red.",
-      "short_name": "Energy auditors"
+      "short_name": "Energy auditors",
+      "hero_whatsapp": "Or ask on WhatsApp"
     }
   },
   "energy": {
