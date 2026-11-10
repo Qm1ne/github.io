@@ -19,6 +19,9 @@ const DEFAULT_OG = {
 
 const OG_LOCALE: Record<Lang, string> = { en: "en_US", fr: "fr_FR" };
 
+/** The image the home page hero shows, and therefore the one it preloads. */
+const HOME_HERO = "/generated_images/Hero_background_office_workspace_03f6ce3c.webp";
+
 export interface PrerenderedPage {
   /** File to write, relative to the build directory. */
   file: string;
@@ -179,6 +182,8 @@ interface HeadInput {
   image: { url: string; width: number; height: number; alt: string };
   alternates: { lang: Lang; path: string }[];
   graph: unknown[];
+  /** This page's own LCP image, preloaded so it is not found late. */
+  preloadImage?: string;
 }
 
 function buildHead(input: HeadInput): string {
@@ -199,6 +204,12 @@ function buildHead(input: HeadInput): string {
   if (xDefault) {
     lines.push(
       `  <link rel="alternate" hreflang="x-default" href="${SITE_URL}${xDefault.path}" />`,
+    );
+  }
+
+  if (input.preloadImage) {
+    lines.push(
+      `  <link rel="preload" as="image" href="${input.preloadImage}" type="image/webp" fetchpriority="high" />`,
     );
   }
 
@@ -279,6 +290,7 @@ export async function prerender(): Promise<PrerenderedPage[]> {
           ogType: "website",
           image: DEFAULT_OG,
           alternates,
+          preloadImage: landing.hero.image,
           graph: [
             organization(),
             website(lang),
@@ -304,6 +316,7 @@ export async function prerender(): Promise<PrerenderedPage[]> {
           ogType: "website",
           image: DEFAULT_OG,
           alternates,
+          preloadImage: HOME_HERO,
           graph: [
             organization(),
             website(lang),
@@ -329,6 +342,7 @@ export async function prerender(): Promise<PrerenderedPage[]> {
           ogType: "article",
           image,
           alternates,
+          preloadImage: article.image,
           graph: [
             organization(),
             website(lang),

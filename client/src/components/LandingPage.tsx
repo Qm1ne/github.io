@@ -27,6 +27,7 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
   const { t } = useTranslation();
   const k = (suffix: string) => `${landing.key}.${suffix}`;
   const campaign = landing.campaign;
+  const aside = landing.hero.layout === "side";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -34,34 +35,88 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
       <main className="flex-1">
         {/* 1. Hero: one pain, one outcome, one call to action. */}
         <section className="relative overflow-hidden border-b bg-muted/30">
-          <div className="max-w-4xl mx-auto px-6 py-16 lg:py-24 text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-primary">
-              {t(k("hero_eyebrow"))}
-            </p>
-            <h1
-              className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight"
-              data-testid="text-landing-headline"
+          {/* A photograph sits behind the text under a scrim. A diagram
+              cannot: text over a chart is unreadable and cropping a chart cuts
+              the labels off, so that one is laid out beside the text instead
+              and is a real illustration with real alt text. */}
+          {!aside && (
+            <>
+              <img
+                src={landing.hero.image}
+                alt=""
+                aria-hidden="true"
+                width={landing.hero.width}
+                height={landing.hero.height}
+                fetchPriority="high"
+                decoding="async"
+                className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+              />
+              <div
+                aria-hidden="true"
+                className={`absolute inset-0 ${landing.hero.scrim}`}
+              />
+            </>
+          )}
+
+          <div
+            className={`relative z-10 mx-auto px-6 py-16 lg:py-24 ${
+              aside ? "max-w-6xl" : "max-w-4xl"
+            }`}
+          >
+            <div
+              className={
+                aside ? "grid items-center gap-10 lg:grid-cols-2" : undefined
+              }
             >
-              {t(k("hero_title"))}
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              {t(k("hero_subtext"))}
-            </p>
-            <div className="mt-8 flex justify-center">
-              <CalendlyButton
-                campaign={campaign}
-                location="hero"
-                size="lg"
-                className="w-full sm:w-auto whitespace-normal h-auto py-3 text-base px-6 sm:px-8 gap-2"
-                data-testid="button-landing-hero-cta"
-              >
-                {t(k("hero_cta"))}
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
-              </CalendlyButton>
+              <div className={aside ? "text-center lg:text-left" : "text-center"}>
+                <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+                  {t(k("hero_eyebrow"))}
+                </p>
+                <h1
+                  className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight"
+                  data-testid="text-landing-headline"
+                >
+                  {t(k("hero_title"))}
+                </h1>
+                <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+                  {t(k("hero_subtext"))}
+                </p>
+                <div
+                  className={`mt-8 flex justify-center ${
+                    aside ? "lg:justify-start" : ""
+                  }`}
+                >
+                  <CalendlyButton
+                    campaign={campaign}
+                    location="hero"
+                    size="lg"
+                    className="w-full sm:w-auto whitespace-normal h-auto py-3 text-base px-6 sm:px-8 gap-2"
+                    data-testid="button-landing-hero-cta"
+                  >
+                    {t(k("hero_cta"))}
+                    <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                  </CalendlyButton>
+                </div>
+                {/* Darker than the usual muted grey: this one sits over a
+                    photograph on one of the two pages, and muted grey does not
+                    hold 4.5:1 against it. */}
+                <p className="mt-4 text-sm text-foreground/75">
+                  {t(k("hero_note"))}
+                </p>
+              </div>
+
+              {aside && (
+                <img
+                  src={landing.hero.image}
+                  alt={t(landing.hero.altKey ?? "")}
+                  width={landing.hero.width}
+                  height={landing.hero.height}
+                  fetchPriority="high"
+                  decoding="async"
+                  className="mx-auto w-full max-w-md lg:max-w-none"
+                />
+              )}
             </div>
-            <p className="mt-4 text-sm text-muted-foreground">
-              {t(k("hero_note"))}
-            </p>
           </div>
         </section>
 
