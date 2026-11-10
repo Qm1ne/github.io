@@ -52,7 +52,7 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                 campaign={campaign}
                 location="hero"
                 size="lg"
-                className="text-base px-8 gap-2"
+                className="w-full sm:w-auto whitespace-normal h-auto py-3 text-base px-6 sm:px-8 gap-2"
                 data-testid="button-landing-hero-cta"
               >
                 {t(k("hero_cta"))}
@@ -236,7 +236,7 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                 location="footer"
                 size="lg"
                 variant="secondary"
-                className="text-base px-8 gap-2"
+                className="w-full sm:w-auto whitespace-normal h-auto py-3 text-base px-6 sm:px-8 gap-2"
                 data-testid="button-landing-final-cta"
               >
                 {t(k("final_cta"))}
@@ -247,7 +247,7 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                 location="footer"
                 size="lg"
                 variant="outline"
-                className="text-base px-8 bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10"
+                className="w-full sm:w-auto whitespace-normal h-auto py-3 text-base px-6 sm:px-8 bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10"
                 data-testid="button-landing-whatsapp"
               >
                 {t(k("final_whatsapp"))}
