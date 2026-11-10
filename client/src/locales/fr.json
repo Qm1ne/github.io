@@ -193,7 +193,11 @@
       "final_body": "Une demi-heure, vos propres données de visite, et vous voyez ce qui sort à l'autre bout.",
       "final_cta": "Réserver 30 minutes de démonstration",
       "final_whatsapp": "Poser une question sur WhatsApp",
-      "proof_link_back": "Voir comment ça marche pour les installateurs"
+      "proof_link_back": "Voir comment ça marche pour les installateurs",
+      "service_name": "Dossiers de demande photovoltaïque STEG",
+      "service_type": "Automatisation documentaire",
+      "breadcrumb": "Installateurs solaires",
+      "audience": "Installateurs solaires"
     },
     "auditors": {
       "hero_eyebrow": "Pour les auditeurs énergétiques du bâtiment",
@@ -235,7 +239,11 @@
       "final_body": "Une demi-heure, un vrai bâtiment, et vous voyez le brouillon qu'il produit.",
       "final_cta": "Réserver 30 minutes de démonstration",
       "final_whatsapp": "Poser une question sur WhatsApp",
-      "proof_link_back": "Voir comment ça marche pour les auditeurs"
+      "proof_link_back": "Voir comment ça marche pour les auditeurs",
+      "service_name": "Rédaction de brouillons d'audit énergétique",
+      "service_type": "Automatisation documentaire",
+      "breadcrumb": "Auditeurs énergétiques",
+      "audience": "Auditeurs énergétiques du bâtiment"
     }
   },
   "energy": {

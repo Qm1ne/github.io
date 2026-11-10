@@ -193,7 +193,11 @@
       "final_body": "Half an hour, your own survey data, and you see what comes out the other end.",
       "final_cta": "Book a 30-minute walkthrough",
       "final_whatsapp": "Ask on WhatsApp",
-      "proof_link_back": "See how it works for installers"
+      "proof_link_back": "See how it works for installers",
+      "service_name": "STEG photovoltaic application documents",
+      "service_type": "Document automation",
+      "breadcrumb": "Solar installers",
+      "audience": "Solar installers"
     },
     "auditors": {
       "hero_eyebrow": "For building energy auditors",
@@ -235,7 +239,11 @@
       "final_body": "Half an hour, one real building, and you see the draft it produces.",
       "final_cta": "Book a 30-minute walkthrough",
       "final_whatsapp": "Ask on WhatsApp",
-      "proof_link_back": "See how it works for auditors"
+      "proof_link_back": "See how it works for auditors",
+      "service_name": "Energy audit report drafting",
+      "service_type": "Document automation",
+      "breadcrumb": "Energy auditors",
+      "audience": "Building energy auditors"
     }
   },
   "energy": {

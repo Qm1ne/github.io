@@ -115,14 +115,24 @@ function services(t: TFunction, url: string) {
   }));
 }
 
-/** The one service a landing page sells, marked up from its visible hero copy. */
+/**
+ * The one service a landing page sells.
+ *
+ * `name` is the name of the service, not the page's headline: a headline reads
+ * as a sentence and makes a useless entity name. `audience` carries who the
+ * page is for, which is what the eyebrow actually says.
+ */
 function landingService(t: TFunction, landing: LandingMetadata, url: string) {
   return {
     "@type": "Service",
     "@id": `${url}#service`,
-    name: t(`${landing.key}.hero_title`),
+    name: t(`${landing.key}.service_name`),
     description: t(`${landing.key}.hero_subtext`),
-    serviceType: t(`${landing.key}.hero_eyebrow`),
+    serviceType: t(`${landing.key}.service_type`),
+    audience: {
+      "@type": "Audience",
+      audienceType: t(`${landing.key}.audience`),
+    },
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "Tunisia" },
   };
@@ -275,10 +285,11 @@ export async function prerender(): Promise<PrerenderedPage[]> {
             webPage(url, title, description, lang, DEFAULT_OG.url),
             landingService(t, landing, url),
             faqPage(t, landing, url),
+            // A breadcrumb trail is a short label, not the page headline.
             breadcrumb(
               url,
               `${SITE_URL}${pathForLang("/", lang)}`,
-              t(`${landing.key}.hero_title`),
+              t(`${landing.key}.breadcrumb`),
             ),
           ],
         });

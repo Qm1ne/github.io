@@ -1,0 +1,101 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time. A running deploy is not cancelled, so the live site
+# is never left half updated.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Build and pre-render
+        run: npm run build:site
+
+      - name: Check the build is complete
+        run: |
+          set -e
+
+          for file in 404.html sitemap.xml robots.txt llms.txt CNAME og-image.png; do
+            test -s "docs/$file" || { echo "::error::missing or empty: docs/$file"; exit 1; }
+          done
+
+          # The page list is read from the sitemap rather than written out here.
+          # A hardcoded list silently stops covering new routes, which is how
+          # adding the landing pages left six URLs unchecked.
+          count=0
+          for url in $(sed -n 's|.*<loc>https://aiautomatetn.com\(.*\)</loc>.*|\1|p' docs/sitemap.xml); do
+            case "$url" in
+              */) page="docs${url}index.html" ;;
+              *)  page="docs${url}.html" ;;
+            esac
+            test -s "$page" || { echo "::error::in the sitemap but missing: $page"; exit 1; }
+            # An empty #root means pre-rendering silently fell back to the shell.
+            if grep -q '<div id="root"></div>' "$page"; then
+              echo "::error::$page was not pre-rendered"
+              exit 1
+            fi
+            count=$((count + 1))
+          done
+
+          test "$count" -ge 14 || { echo "::error::sitemap has only $count urls"; exit 1; }
+
+          # Claims the owner withdrew must not come back through a stale
+          # translation or a reverted file.
+          if grep -rqE '80 ?%|Zero errors|Zéro erreur|40 ?%|15-20|15 à 20|20 hours per week|20 heures par semaine' docs --include='*.html'; then
+            echo "::error::a withdrawn claim is back in the built HTML"
+            grep -rlE '80 ?%|Zero errors|Zéro erreur|40 ?%|15-20|15 à 20|20 hours per week|20 heures par semaine' docs --include='*.html'
+            exit 1
+          fi
+
+          # Every landing page states that a person checks the output, because
+          # both outputs are government documents.
+          for page in docs/solar-installers.html docs/energy-auditors.html \
+                      docs/fr/installateurs-solaires.html docs/fr/auditeurs-energetiques.html; do
+            grep -qiE 'brouillon|draft' "$page" || { echo "::error::$page does not say the output is a draft"; exit 1; }
+          done
+
+          # Losing this file would drop the custom domain on the next deploy.
+          grep -q aiautomatetn.com docs/CNAME || { echo "::error::CNAME is wrong"; exit 1; }
+
+          echo "$count pages pre-rendered, claims clean"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
