@@ -155,9 +155,9 @@
   "landings": {
     "solar": {
       "hero_eyebrow": "Pour les installateurs solaires en Tunisie",
-      "hero_title": "Quatre heures de dossier STEG, assemblées en trois minutes environ",
-      "hero_subtext": "Les données client dont vous disposez déjà entrent. Un dossier de demande photovoltaïque complet en sort, au format attendu par la STEG, à relire et à déposer.",
-      "hero_cta": "Réserver 30 minutes de démonstration",
+      "hero_title": "Vos données client entrent. Le dossier STEG sort.",
+      "hero_subtext": "Le dossier, c'est une dizaine de documents, rédigés à partir des données dont vous disposez déjà sur le client, au format attendu par la STEG. Environ trois minutes par exécution, puis vous le relisez et vous le déposez.",
+      "hero_cta": "Apportez vos données, voyez le dossier",
       "hero_note": "Une demi-heure, et rien à installer au préalable.",
       "problem_title": "Ce que la paperasse vous coûte aujourd'hui",
       "problem_body": "Une demande photovoltaïque, c'est la même information recopiée de nombreuses fois : le client, le site, les modèles de panneaux et d'onduleur, les calculs de dimensionnement, les références qui relient les plans entre eux. Réunir ces informations est la partie facile. C'est la mise en dossier qui prend l'après-midi.",
@@ -209,8 +209,8 @@
       "hero_eyebrow": "Pour les auditeurs énergétiques du bâtiment",
       "hero_title": "Des photos de visite à un brouillon de rapport en vingt minutes environ",
       "hero_subtext": "Vous déposez le lot de photos de la visite. Chacune des treize catégories de composants, de la toiture et des façades aux menuiseries, à la plomberie et au chauffage, est analysée par son propre agent. Vous récupérez un brouillon technique structuré à corriger, au lieu d'une page blanche.",
-      "hero_cta": "Réserver 30 minutes de démonstration",
-      "hero_note": "Une demi-heure, et vous pouvez apporter les photos d'une vraie visite.",
+      "hero_cta": "Apportez des photos, voyez le brouillon",
+      "hero_note": "Une demi-heure, et rien à préparer au préalable.",
       "problem_title": "Ce que la rédaction vous coûte aujourd'hui",
       "problem_body": "La visite prend deux heures. Le rapport prend le reste de la semaine. Chaque composant demande son paragraphe : les matériaux, l'état constaté, la performance thermique, vos recommandations et leur ordre de priorité. Les photos sont toutes sur le disque. La rédaction, elle, part de zéro.",
       "problem_1": "Plusieurs heures par bâtiment, passées à décrire ce que vous avez déjà vu de vos yeux.",

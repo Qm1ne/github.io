@@ -155,9 +155,9 @@
   "landings": {
     "solar": {
       "hero_eyebrow": "For solar installers in Tunisia",
-      "hero_title": "Four hours of STEG paperwork, assembled in about three minutes",
-      "hero_subtext": "The client data you already hold goes in. A complete photovoltaic application pack comes out, in the format STEG expects, for you to read and submit.",
-      "hero_cta": "Book a 30-minute walkthrough",
+      "hero_title": "Your client file goes in. The STEG pack comes out.",
+      "hero_subtext": "The pack is around ten documents, written from the data you already hold on the client, in the format STEG expects. About three minutes a run, then you read it and submit it.",
+      "hero_cta": "Bring a file, see the pack",
       "hero_note": "Half an hour, and nothing to install beforehand.",
       "problem_title": "What the paperwork costs you now",
       "problem_body": "A photovoltaic application is the same information written out many times over: the client, the site, the panel and inverter models, the sizing figures, the references that tie the drawings together. Gathering it is the easy part. Turning it into a complete file is where the afternoon goes.",
@@ -209,8 +209,8 @@
       "hero_eyebrow": "For building energy auditors",
       "hero_title": "From site photos to a draft audit write-up in about twenty minutes",
       "hero_subtext": "Upload the batch from the visit. Each of thirteen component categories, from roof and facades through to windows, plumbing and heating, is read by its own agent. You get a structured technical draft to edit instead of a blank page.",
-      "hero_cta": "Book a 30-minute walkthrough",
-      "hero_note": "Half an hour, and you can bring photos from a real visit.",
+      "hero_cta": "Bring photos, see the draft",
+      "hero_note": "Half an hour, and nothing to prepare beforehand.",
       "problem_title": "What the write-up costs you now",
       "problem_body": "The visit takes a couple of hours. The report takes the rest of the week. Every component needs its own paragraph: what it is made of, what condition it is in, how it performs thermally, what you recommend and in what order. The photos are all sitting on the drive. The writing still starts from nothing.",
       "problem_1": "Several hours per building, spent describing things you have already seen with your own eyes.",
