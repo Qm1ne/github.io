@@ -30,6 +30,10 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
   const campaign = landing.campaign;
   const hero = landing.hero;
   const aside = hero.kind === "scale";
+  // "I have a question about your automations" tells the reader nothing about
+  // which of the two products they were looking at, and tells us nothing
+  // either. Each page opens the chat on its own subject.
+  const whatsappMessage = k("whatsapp_message");
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -151,6 +155,7 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                     variant="ghost"
                     size="sm"
                     className="hidden h-auto min-h-0 gap-1 px-1 py-0 text-sm text-foreground/75 underline underline-offset-4 sm:inline-flex"
+                    messageKey={whatsappMessage}
                     data-testid="link-landing-hero-whatsapp"
                   >
                     {t(k("hero_whatsapp"))}
@@ -375,6 +380,7 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
                 size="lg"
                 variant="outline"
                 className="w-full sm:w-auto whitespace-normal h-auto py-3 text-base px-6 sm:px-8 bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10"
+                messageKey={whatsappMessage}
                 data-testid="button-landing-whatsapp"
               >
                 {t(k("final_whatsapp"))}
@@ -383,7 +389,7 @@ export function LandingPage({ landing }: { landing: LandingMetadata }) {
           </div>
         </section>
       </main>
-      <WhatsAppFab campaign={campaign} />
+      <WhatsAppFab campaign={campaign} messageKey={whatsappMessage} />
       <Footer />
     </div>
   );

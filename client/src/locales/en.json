@@ -139,11 +139,11 @@
     "landings": {
       "solar": {
         "title": "STEG photovoltaic paperwork, automated | aiautomateTN",
-        "desc": "Turn the client data you already hold into a ready-to-submit STEG pack in minutes instead of four hours. Every file is checked by a person before submission."
+        "desc": "Your client data becomes a STEG application pack to read and submit, in minutes where assembling it by hand can take up to four hours."
       },
       "auditors": {
         "title": "Draft energy audit reports from site photos | aiautomateTN",
-        "desc": "Turn a batch of site photos into a structured draft write-up across 13 building components in about 20 minutes. The auditor reviews and signs every report."
+        "desc": "Turn a batch of site photos into a structured draft across 13 building components, shaped for French DPE-style audits. The auditor reviews and signs every report."
       }
     }
   },
@@ -203,10 +203,11 @@
       "short_name": "Solar installers",
       "hero_tool_cta": "Try it on one file",
       "hero_whatsapp": "Or ask on WhatsApp",
-      "verified_refund": "If a rejection comes from something the generator got wrong, we refund what that document cost you."
+      "verified_refund": "If a rejection comes from something the generator got wrong, we refund what that document cost you.",
+      "whatsapp_message": "Hello, I have a question about the STEG application pack. I came from aiautomatetn.com."
     },
     "auditors": {
-      "hero_eyebrow": "For building energy auditors",
+      "hero_eyebrow": "For energy auditors in France and Europe",
       "hero_title": "From site photos to a draft audit write-up in about twenty minutes",
       "hero_subtext": "Upload the batch from the visit. Each of thirteen component categories, from roof and facades through to windows, plumbing and heating, is read by its own agent. You get a structured technical draft to edit instead of a blank page.",
       "hero_cta": "Bring photos, see the draft",
@@ -248,12 +249,13 @@
       "proof_link_back": "See how it works for auditors",
       "service_name": "Energy audit report drafting",
       "service_type": "Document automation",
-      "audience": "Building energy auditors",
+      "audience": "Energy auditors in France and Europe",
       "faq_5_q": "Can the report follow our own method?",
       "faq_5_a": "Yes. The template carries your logo, and the section order and the way each component is written follow your own audit methodology rather than a generic one.",
       "hero_image_alt": "Energy rating scale, from A in green down to G in red.",
       "short_name": "Energy auditors",
-      "hero_whatsapp": "Or ask on WhatsApp"
+      "hero_whatsapp": "Or ask on WhatsApp",
+      "whatsapp_message": "Hello, I have a question about the draft audit report. I came from aiautomatetn.com."
     }
   },
   "energy": {

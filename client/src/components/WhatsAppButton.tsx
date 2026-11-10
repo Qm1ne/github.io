@@ -49,13 +49,20 @@ export function WhatsAppButton({
  * It sits below the sticky navigation in the stacking order so it can never
  * cover the menu, and it is a plain link so it works without scripting.
  */
-export function WhatsAppFab({ campaign }: { campaign: string }) {
+export function WhatsAppFab({
+  campaign,
+  messageKey = "whatsapp.message",
+}: {
+  campaign: string;
+  /** Translation key for the message the chat opens with. */
+  messageKey?: string;
+}) {
   const { t } = useTranslation();
   const label = t("whatsapp.aria");
 
   return (
     <a
-      href={whatsappHref(t("whatsapp.message"))}
+      href={whatsappHref(t(messageKey))}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
