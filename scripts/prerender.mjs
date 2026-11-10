@@ -58,7 +58,7 @@ function sitemap(pages) {
         )
         .concat(
           page.alternates
-            .filter((alt) => alt.lang === "en")
+            .filter((alt) => alt.lang === page.xDefaultLang)
             .map(
               (alt) =>
                 `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${alt.path}" />`,

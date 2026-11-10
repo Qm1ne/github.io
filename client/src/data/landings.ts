@@ -1,3 +1,5 @@
+import type { Lang } from "@/lib/routing";
+
 /**
  * The two energy-sector landing pages. Both use the same seven-section shell,
  * so a page is described by its translation keys and how many repeated items
@@ -28,6 +30,16 @@ export interface LandingMetadata {
   articleSlug: string;
   /** `utm_campaign` for every CTA on this page. */
   campaign: string;
+  /**
+   * Where `hreflang="x-default"` points: the version a search engine should
+   * show somebody whose own language matches neither.
+   *
+   * English by default, because the site sells automation work to anybody.
+   * A page written for one country's paperwork is different: its reader is
+   * overwhelmingly a speaker of that country's working language, and sending
+   * them to English first makes them click twice.
+   */
+  defaultLang?: Lang;
   /**
    * What the hero shows beside or behind its text.
    *
@@ -73,6 +85,9 @@ export const landings: LandingMetadata[] = [
     faqs: 5,
     articleSlug: "energy-audit-draft-reports",
     campaign: "energy-auditors",
+    // DPE is a French diagnostic. An auditor reaching this page works in
+    // French, whatever language their browser asks for.
+    defaultLang: "fr",
     hero: {
       kind: "scale",
       titleKey: "landings.auditors.hero_image_alt",

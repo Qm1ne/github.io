@@ -3,7 +3,7 @@ import type { TFunction } from "i18next";
 import App from "./App";
 import i18n from "./i18n";
 import { articles } from "./data/articles";
-import { landings, type LandingMetadata } from "./data/landings";
+import { landingFor, landings, type LandingMetadata } from "./data/landings";
 import { LANGS, SITE_URL, pathForLang, type Lang } from "./lib/routing";
 
 const ORG_ID = `${SITE_URL}/#organization`;
@@ -34,6 +34,9 @@ export interface PrerenderedPage {
   body: string;
   /** The same page in the other languages, for the sitemap. */
   alternates: { lang: Lang; path: string }[];
+  /** Which language `x-default` points at. The sitemap must agree with the
+   *  page: a disagreement is a conflicting signal, not a stronger one. */
+  xDefaultLang: Lang;
 }
 
 function esc(value: string): string {
@@ -181,6 +184,8 @@ interface HeadInput {
   ogType: "website" | "article";
   image: { url: string; width: number; height: number; alt: string };
   alternates: { lang: Lang; path: string }[];
+  /** Which language an unmatched visitor should be sent to. */
+  xDefaultLang: Lang;
   graph: unknown[];
   /** This page's own LCP image, preloaded so it is not found late. */
   preloadImage?: string;
@@ -200,7 +205,9 @@ function buildHead(input: HeadInput): string {
       `  <link rel="alternate" hreflang="${alt.lang}" href="${SITE_URL}${alt.path}" />`,
     );
   }
-  const xDefault = input.alternates.find((alt) => alt.lang === "en");
+  const xDefault = input.alternates.find(
+    (alt) => alt.lang === input.xDefaultLang,
+  );
   if (xDefault) {
     lines.push(
       `  <link rel="alternate" hreflang="x-default" href="${SITE_URL}${xDefault.path}" />`,
@@ -277,6 +284,11 @@ export async function prerender(): Promise<PrerenderedPage[]> {
       const alternates = alternatesFor(route);
       const landing = landings.find((l) => l.path === route);
       const article = articles.find((a) => `/article/${a.slug}` === route);
+      // A case study is the proof for a landing page and is read by the same
+      // people, so it follows that page's default rather than the site's.
+      const owner = article?.landing ? landingFor(article.landing) : undefined;
+      const xDefaultLang: Lang =
+        landing?.defaultLang ?? owner?.defaultLang ?? "en";
 
       let head: string;
       if (landing) {
@@ -290,6 +302,7 @@ export async function prerender(): Promise<PrerenderedPage[]> {
           ogType: "website",
           image: DEFAULT_OG,
           alternates,
+          xDefaultLang,
           // A drawn scale is in the HTML already; there is nothing to fetch.
           preloadImage:
             landing.hero.kind === "photo" ? landing.hero.image : undefined,
@@ -318,6 +331,7 @@ export async function prerender(): Promise<PrerenderedPage[]> {
           ogType: "website",
           image: DEFAULT_OG,
           alternates,
+          xDefaultLang,
           preloadImage: HOME_HERO,
           graph: [
             organization(),
@@ -344,6 +358,7 @@ export async function prerender(): Promise<PrerenderedPage[]> {
           ogType: "article",
           image,
           alternates,
+          xDefaultLang,
           preloadImage: article.image,
           graph: [
             organization(),
@@ -378,6 +393,7 @@ export async function prerender(): Promise<PrerenderedPage[]> {
         head,
         body: renderToString(<App lang={lang} ssrPath={path} />),
         alternates,
+        xDefaultLang,
       });
     }
   }
