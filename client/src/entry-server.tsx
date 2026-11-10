@@ -3,6 +3,7 @@ import type { TFunction } from "i18next";
 import App from "./App";
 import i18n from "./i18n";
 import { articles } from "./data/articles";
+import { landings, type LandingMetadata } from "./data/landings";
 import { LANGS, SITE_URL, pathForLang, type Lang } from "./lib/routing";
 
 const ORG_ID = `${SITE_URL}/#organization`;
@@ -114,6 +115,51 @@ function services(t: TFunction, url: string) {
   }));
 }
 
+/** The one service a landing page sells, marked up from its visible hero copy. */
+function landingService(t: TFunction, landing: LandingMetadata, url: string) {
+  return {
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name: t(`${landing.key}.hero_title`),
+    description: t(`${landing.key}.hero_subtext`),
+    serviceType: t(`${landing.key}.hero_eyebrow`),
+    provider: { "@id": ORG_ID },
+    areaServed: { "@type": "Country", name: "Tunisia" },
+  };
+}
+
+/**
+ * The FAQ as structured data, taken from the same keys the page renders, so
+ * the markup and the markup-about-the-markup cannot drift apart.
+ */
+function faqPage(t: TFunction, landing: LandingMetadata, url: string) {
+  return {
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: Array.from({ length: landing.faqs }, (_, index) => index + 1).map(
+      (n) => ({
+        "@type": "Question",
+        name: t(`${landing.key}.faq_${n}_q`),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t(`${landing.key}.faq_${n}_a`),
+        },
+      }),
+    ),
+  };
+}
+
+function breadcrumb(url: string, brandHome: string, name: string) {
+  return {
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: BRAND, item: brandHome },
+      { "@type": "ListItem", position: 2, name },
+    ],
+  };
+}
+
 interface HeadInput {
   lang: Lang;
   path: string;
@@ -193,7 +239,11 @@ function alternatesFor(route: string) {
 
 /** Renders every route in every language, ready to be written to disk. */
 export async function prerender(): Promise<PrerenderedPage[]> {
-  const routes = ["/", ...articles.map((article) => `/article/${article.slug}`)];
+  const routes = [
+    "/",
+    ...landings.map((landing) => landing.path),
+    ...articles.map((article) => `/article/${article.slug}`),
+  ];
   const pages: PrerenderedPage[] = [];
 
   for (const lang of LANGS) {
@@ -204,10 +254,35 @@ export async function prerender(): Promise<PrerenderedPage[]> {
       const path = pathForLang(route, lang);
       const url = `${SITE_URL}${path}`;
       const alternates = alternatesFor(route);
+      const landing = landings.find((l) => l.path === route);
       const article = articles.find((a) => `/article/${a.slug}` === route);
 
       let head: string;
-      if (!article) {
+      if (landing) {
+        const title = t(`seo.${landing.key}.title`);
+        const description = t(`seo.${landing.key}.desc`);
+        head = buildHead({
+          lang,
+          path,
+          title,
+          description,
+          ogType: "website",
+          image: DEFAULT_OG,
+          alternates,
+          graph: [
+            organization(),
+            website(lang),
+            webPage(url, title, description, lang, DEFAULT_OG.url),
+            landingService(t, landing, url),
+            faqPage(t, landing, url),
+            breadcrumb(
+              url,
+              `${SITE_URL}${pathForLang("/", lang)}`,
+              t(`${landing.key}.hero_title`),
+            ),
+          ],
+        });
+      } else if (!article) {
         const title = t("seo.home_title");
         const description = t("seo.home_desc");
         head = buildHead({
@@ -260,19 +335,11 @@ export async function prerender(): Promise<PrerenderedPage[]> {
               isPartOf: { "@id": SITE_ID },
               mainEntityOfPage: { "@id": `${url}#webpage` },
             },
-            {
-              "@type": "BreadcrumbList",
-              "@id": `${url}#breadcrumb`,
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: BRAND,
-                  item: `${SITE_URL}${pathForLang("/", lang)}`,
-                },
-                { "@type": "ListItem", position: 2, name: headline },
-              ],
-            },
+            breadcrumb(
+              url,
+              `${SITE_URL}${pathForLang("/", lang)}`,
+              headline,
+            ),
           ],
         });
       }
